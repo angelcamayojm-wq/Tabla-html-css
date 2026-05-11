@@ -3,166 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Aprendices</title>
-
+    <title>Mundo Fútbol CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video class="video-fondo" autoplay muted loop>
+    <source src="videos/video-futbol.mp4" type="video/mp4">
+</video>
 
-    <h1>📋 Registro de Aprendices SENA</h1>
+<div class="capa-oscura"></div>
 
-    <table class="tabla-principal" border="1" cellpadding="15" cellspacing="0">
+<main class="contenido">
 
-        <tr>
-            <th>ID</th>
-            <th>Nombre Completo</th>
-            <th>Documento</th>
-            <th>Programa</th>
-            <th>Ficha</th>
-            <th>Correo</th>
-            <th>Teléfono</th>
-            <th>Ciudad</th>
-            <th>Edad</th>
-            <th>Estado</th>
-        </tr>
+    <header class="portada">
+        <h1>⚽ Mundo Fútbol CSS</h1>
+        <p>Presentación de tablas, bordes, formas y fondos</p>
+    </header>
 
-        <tr>
-            <td>1</td>
-            <td>Angel Esteban Rivera Camayo</td>
-            <td>1023456789</td>
-            <td>Análisis y Desarrollo de Software</td>
-            <td>2876541</td>
-            <td>angel@gmail.com</td>
-            <td>3204567890</td>
-            <td>Bogotá</td>
-            <td>20</td>
-            <td>Activo</td>
-        </tr>
+    <section class="seccion">
+        <h2>🏆 Tabla Principal de Jugadores</h2>
 
-        <tr>
-            <td>2</td>
-            <td>Laura Gómez</td>
-            <td>1034567890</td>
-            <td>Diseño Web</td>
-            <td>2876542</td>
-            <td>laura@gmail.com</td>
-            <td>3114567890</td>
-            <td>Medellín</td>
-            <td>22</td>
-            <td>Activo</td>
-        </tr>
+        <table class="tabla-principal" cellpadding="12" cellspacing="0">
+            <tr>
+                <th>ID</th>
+                <th>Jugador</th>
+                <th>Equipo</th>
+                <th>País</th>
+                <th>Posición</th>
+                <th>Dorsal</th>
+                <th>Estado</th>
+            </tr>
 
-        <tr>
-            <td>3</td>
-            <td>Carlos Pérez</td>
-            <td>1045678901</td>
-            <td>Programación</td>
-            <td>2876543</td>
-            <td>carlos@gmail.com</td>
-            <td>3124567890</td>
-            <td>Cali</td>
-            <td>19</td>
-            <td>En formación</td>
-        </tr>
+            <tr class="fila-verde">
+                <td>1</td>
+                <td>Lionel Messi</td>
+                <td>Inter Miami</td>
+                <td>Argentina</td>
+                <td>Delantero</td>
+                <td>10</td>
+                <td>Activo</td>
+            </tr>
 
-    </table>
+            <tr class="fila-clara">
+                <td>2</td>
+                <td>Cristiano Ronaldo</td>
+                <td>Al Nassr</td>
+                <td>Portugal</td>
+                <td>Delantero</td>
+                <td>7</td>
+                <td>Activo</td>
+            </tr>
 
-  
-    <div class="contenedor-tablas">
+            <tr class="fila-verde">
+                <td>3</td>
+                <td>Neymar Jr</td>
+                <td>Santos</td>
+                <td>Brasil</td>
+                <td>Extremo</td>
+                <td>10</td>
+                <td>Activo</td>
+            </tr>
+        </table>
+    </section>
 
-        <div>
-            <h2>Tabla Izquierda</h2>
+    <section class="seccion jugadores">
+    <h2>⭐ Jugadores Legendarios</h2>
 
-            <table class="tabla-izquierda" border="1" cellpadding="12" cellspacing="0">
+    <div class="contenedor-cards">
 
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>Angel</td>
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td>Laura</td>
-                </tr>
-
-            </table>
+        <div class="card">
+            <img src="imagenes/messi.png" alt="Messi">
+            <h3>Lionel Messi</h3>
+            <p>Argentina</p>
+            <p>Inter Miami</p>
         </div>
 
-        <div>
-            <h2>Tabla Centro</h2>
-
-            <table class="tabla-centro" border="1" cellpadding="12" cellspacing="0">
-
-                <tr>
-                    <th>ID</th>
-                    <th>Ciudad</th>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>Bogotá</td>
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td>Medellín</td>
-                </tr>
-
-            </table>
+        <div class="card">
+            <img src="imagenes/cristiano.png" alt="Cristiano Ronaldo">
+            <h3>Cristiano Ronaldo</h3>
+            <p>Portugal</p>
+            <p>Al Nassr</p>
         </div>
 
-        <div>
-            <h2>Tabla Derecha</h2>
-
-            <table class="tabla-derecha" border="1" cellpadding="12" cellspacing="0">
-
-                <tr>
-                    <th>ID</th>
-                    <th>Programa</th>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>ADSO</td>
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td>Diseño Web</td>
-                </tr>
-
-            </table>
+        <div class="card">
+            <img src="imagenes/neymar.png" alt="Neymar">
+            <h3>Neymar Jr</h3>
+            <p>Brasil</p>
+            <p>Santos</p>
         </div>
 
     </div>
+</section>
 
-  
-    <h2 class="titulo-fondos">Fondos con Background</h2>
+    <section class="seccion">
+        <h2>📊 Tablas Alineadas</h2>
 
-    <div class="fondo-repeat">
-        <h3>Background Repeat</h3>
-    </div>
+        <div class="contenedor-tablas">
 
-    <div class="fondo-cover">
-        <h3>Background Cover</h3>
-    </div>
+            <div class="caja-tabla">
+                <h3>Delanteros</h3>
+                <table class="tabla-izquierda" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <th>ID</th>
+                        <th>Jugador</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="texto-izquierda">Messi</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="texto-izquierda">Cristiano</td>
+                    </tr>
+                </table>
+            </div>
 
-    <div class="fondo-doble">
-        <h3>Doble Imagen: Contain + Cover</h3>
-    </div>
+            <div class="caja-tabla">
+                <h3>Equipos</h3>
+                <table class="tabla-centro" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <th>ID</th>
+                        <th>Equipo</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="texto-centro">Inter Miami</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="texto-centro">Al Nassr</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="caja-tabla">
+                <h3>Países</h3>
+                <table class="tabla-derecha" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <th>ID</th>
+                        <th>País</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="texto-derecha">Argentina</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="texto-derecha">Portugal</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="seccion">
+        <h2>🧱 Ejemplos de Border Style</h2>
+
+        <div class="contenedor-bordes">
+            <div class="borde solid">solid</div>
+            <div class="borde dashed">dashed</div>
+            <div class="borde dotted">dotted</div>
+            <div class="borde double">double</div>
+            <div class="borde groove">groove</div>
+            <div class="borde ridge">ridge</div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <h2>🔵 Border Radius y Formas</h2>
+
+        <div class="contenedor-formas">
+            <div class="forma balon"></div>
+            <div class="forma tarjeta"></div>
+            <div class="forma escudo"></div>
+        </div>
+    </section>
+
+</div>
+
+    <section class="seccion">
+        <h2>🖼️ Fondos con Background</h2>
+
+        <div class="fondo-repeat">
+            <h3>Background Repeat</h3>
+        </div>
+
+        <div class="fondo-cover">
+            <h3>Background Cover</h3>
+        </div>
+
+        <div class="fondo-contain">
+            <h3>Background Contain</h3>
+        </div>
+
+        <div class="fondo-position">
+            <h3>Background Position + Size en %</h3>
+        </div>
+    </section>
+
+    <section class="seccion">
+    <h2>🎯 Imagen Sobre Otra</h2>
 
     <div class="imagen-superpuesta">
 
-    <h2>Imagen Sobre Otra</h2>
+        <h3>Tiro Libre: Fondo + Barrera + Jugador</h3>
 
-</div>
-   
+        <img class="barrera-tiro" src="imagenes/barrera.png" alt="Barrera de jugadores">
 
+        <img class="jugador-tiro" src="imagenes/tirolibre.png" alt="Jugador pateando">
+
+    </div>
+</section>
+
+    </main>
 
 </body>
 </html>
