@@ -1,10 +1,30 @@
+/* =========================
+   CONFIGURACION GENERAL
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #082f1f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================
+   VIDEO FONDO
+========================= */
+
 .video-fondo {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     z-index: -2;
 }
 
@@ -12,9 +32,12 @@
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background-color: rgba(0, 0, 0, 0.55);
+
     z-index: -1;
 }
 
@@ -23,13 +46,9 @@
     z-index: 1;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #082f1f;
-    color: white;
-}
+/* =========================
+   PORTADA
+========================= */
 
 .portada {
     text-align: center;
@@ -47,17 +66,30 @@ body {
     color: #d1fae5;
 }
 
+h1,
+h2 {
+    text-shadow:
+        0px 0px 10px rgba(250, 204, 21, 0.8),
+        0px 0px 20px rgba(34, 197, 94, 0.5);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
 .seccion {
     width: 90%;
     margin: 50px auto;
     padding: 35px;
-    background-color: rgba(255,255,255,0.10);
+
+    background-color: rgba(255, 255, 255, 0.10);
+
     border: 3px solid #22c55e;
     border-radius: 25px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.35);
-    animation-name: entradaSeccion;
-    animation-duration: 1.2s;
-    animation-timing-function: ease;
+
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.35);
+
+    animation: entradaSeccion 1.2s ease;
 }
 
 .seccion h2 {
@@ -66,28 +98,26 @@ body {
     font-size: 34px;
 }
 
-h1,
-h2 {
-    text-shadow:
-    0px 0px 10px rgba(250,204,21,0.8),
-    0px 0px 20px rgba(34,197,94,0.5);
-}
-
-/* TABLAS */
+/* =========================
+   TABLAS
+========================= */
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: rgba(255,255,255,0.92);
+
+    background-color: rgba(255, 255, 255, 0.92);
     color: #0f172a;
+
     transition: 0.4s;
 }
 
 table:hover {
     transform: scale(1.02);
+
     box-shadow:
-    0px 0px 25px rgba(34,197,94,0.8),
-    0px 0px 45px rgba(250,204,21,0.4);
+        0px 0px 25px rgba(34, 197, 94, 0.8),
+        0px 0px 45px rgba(250, 204, 21, 0.4);
 }
 
 tr {
@@ -102,13 +132,16 @@ tr:hover {
 th {
     background-color: #16a34a;
     color: white;
+
     padding: 14px;
+
     border: 2px solid #14532d;
 }
 
 td {
     padding: 12px;
     text-align: center;
+
     border: 2px solid #86efac;
 }
 
@@ -123,7 +156,7 @@ td {
 }
 
 .fila-clara {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .contenedor-tablas {
@@ -138,7 +171,7 @@ td {
 }
 
 .caja-tabla h3 {
-    color: #ffffff;
+    color: white;
     font-size: 24px;
 }
 
@@ -166,7 +199,9 @@ td {
     text-align: right;
 }
 
-/* BORDER STYLE */
+/* =========================
+   BORDES
+========================= */
 
 .contenedor-bordes {
     text-align: center;
@@ -175,13 +210,19 @@ td {
 .borde {
     width: 180px;
     height: 80px;
+
     display: inline-block;
+
     margin: 15px;
     padding-top: 55px;
+
     text-align: center;
     font-weight: bold;
-    background-color: rgba(0,0,0,0.35);
+
+    background-color: rgba(0, 0, 0, 0.35);
+
     color: white;
+
     border-width: 5px;
     border-color: #facc15;
     border-radius: 18px;
@@ -211,28 +252,39 @@ td {
     border-style: ridge;
 }
 
-/* FORMAS */
+/* =========================
+   FORMAS
+========================= */
 
 .contenedor-formas {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 80px;
+
     margin-top: 60px;
+
     flex-wrap: wrap;
 }
 
 .forma {
     width: 170px;
     height: 170px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin: 20px;
+
     color: transparent;
+
     font-size: 24px;
     font-weight: bold;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+
     transition: 0.4s;
 }
 
@@ -242,6 +294,7 @@ td {
 
 .balon {
     border-radius: 50%;
+
     background-image: url("imagenes/balon.png");
     background-size: cover;
     background-position: center;
@@ -251,25 +304,32 @@ td {
 .tarjeta {
     border-radius: 20px;
     overflow: hidden;
+
     background-image: url("imagenes/champions.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     box-shadow: 0px 0px 25px gold;
 }
 
 .escudo {
     border-radius: 40px 5px 40px 5px;
+
     background-image:
         linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
         url("imagenes/escudo.png");
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
     background-color: #14532d;
 }
 
-
+/* =========================
+   CARDS
+========================= */
 
 .jugadores {
     text-align: center;
@@ -281,21 +341,29 @@ td {
 
 .card {
     width: 260px;
+
     display: inline-block;
     vertical-align: top;
+
     margin: 20px;
     padding: 20px;
+
     background-color: rgba(255,255,255,0.14);
+
     border: 3px solid #22c55e;
     border-radius: 25px;
+
     box-shadow: 0px 10px 25px rgba(0,0,0,0.35);
+
     transition: 0.4s;
 }
 
 .card img {
     width: 100%;
     height: 260px;
+
     object-fit: cover;
+
     border-radius: 20px;
     border: 3px solid #facc15;
 }
@@ -312,10 +380,13 @@ td {
 
 .card:hover {
     transform: translateY(-12px) scale(1.03);
+
     box-shadow: 0px 0px 30px rgba(250,204,21,0.7);
 }
 
-
+/* =========================
+   FONDOS
+========================= */
 
 .fondo-repeat,
 .fondo-cover,
@@ -324,10 +395,14 @@ td {
 .imagen-superpuesta {
     width: 90%;
     height: 320px;
+
     margin: 30px auto;
+
     border-radius: 22px;
     border: 5px solid #facc15;
+
     box-shadow: 0px 10px 25px rgba(0,0,0,0.45);
+
     overflow: hidden;
 }
 
@@ -338,13 +413,17 @@ td {
 .imagen-superpuesta h3 {
     text-align: center;
     color: white;
+
     padding-top: 25px;
+
     font-size: 28px;
+
     text-shadow: 2px 2px 8px black;
 }
 
 .fondo-repeat {
     background-color: #14532d;
+
     background-image: url("imagenes/balon.png");
     background-size: 300px;
     background-repeat: repeat;
@@ -353,17 +432,21 @@ td {
 
 .fondo-cover {
     background-color: #0f172a;
+
     background-image:
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url("imagenes/champions.png");
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .fondo-contain {
-    background-color:transparent;
+    background-color: transparent;
+
     background-image: url("imagenes/cristiano.png");
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -371,15 +454,17 @@ td {
 
 .fondo-position {
     background-color: #064e3b;
+
     background-image: url("imagenes/balon.png");
+
     background-size: 20%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-
-
-/* IMAGEN SOBRE OTRA - TIRO LIBRE */
+/* =========================
+   IMAGEN SUPERPUESTA
+========================= */
 
 .imagen-superpuesta {
     position: relative;
@@ -389,11 +474,6 @@ td {
     height: 560px;
 
     margin: 35px auto;
-
-    border: 5px solid #facc15;
-    border-radius: 25px;
-
-    overflow: hidden;
 
     background-image:
         linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.20)),
@@ -408,83 +488,320 @@ td {
         0px 12px 35px rgba(0,0,0,0.65);
 }
 
-
-.imagen-superpuesta h3 {
-    position: absolute;
-
-    top: 18px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    padding: 10px 22px;
-
-    background-color: rgba(0,0,0,0.45);
-
-    border: 2px solid rgba(250,204,21,0.75);
-    border-radius: 20px;
-
-    text-align: center;
-
-    color: white;
-    font-size: 22px;
-
-    text-shadow:
-        2px 2px 8px black,
-        0px 0px 15px rgba(250,204,21,0.9);
-
-    z-index: 10;
-}
-
-
 .barrera-tiro {
     position: absolute;
 
     width: 430px;
 
     left: 60%;
-   
-
     transform: translateX(-50%);
 
     z-index: 2;
-
-    filter:
-        drop-shadow(0px 8px 12px rgba(0,0,0,0.75));
 }
-
 
 .jugador-tiro {
     position: absolute;
 
     width: 330px;
 
-    
     bottom: 32px;
 
     z-index: 5;
-
-    filter:
-        drop-shadow(0px 10px 16px rgba(0,0,0,0.85));
 }
 
+/* =========================
+   CLIP PATH
+========================= */
 
+.contenedor1 {
+    display: flex;
 
-@keyframes entradaSeccion {
-    0% {
-        opacity: 0;
-        transform: translateY(60px);
-    }
+    justify-content: center;
+    align-items: center;
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    gap: 40px;
+
+    flex-wrap: wrap;
 }
-/* FOOTER */
+
+.triangle,
+.octagono,
+.estrella {
+    width: 250px;
+    height: 250px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.triangle {
+    background-image: url("imagenes/messi.png");
+
+    clip-path: polygon(
+        50% 0%,
+        0% 100%,
+        100% 100%
+    );
+}
+
+.octagono {
+    background-image: url("imagenes/cristiano.png");
+
+    clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+    );
+}
+
+.estrella {
+    background-image: url("imagenes/neymar.png");
+
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+}
+
+.boton1 {
+    width: 120px;
+    height: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff512f,
+            #dd2476
+        );
+}
+
+.boton2 {
+    width: 180px;
+    height: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2193b0,
+            #6dd5ed
+        );
+}
+
+.boton3 {
+    width: 220px;
+    height: 80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #11998e,
+            #38ef7d
+        );
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 90%;
+    height: 500px;
+
+    margin: 60px auto;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,0,0,0.7),
+            rgba(255,255,255,0.15)
+        ),
+        url("imagenes/escudo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border: 4px solid #facc15;
+}
+
+.hero-contenido h1 {
+    font-size: 70px;
+}
+
+.hero-contenido p {
+    font-size: 25px;
+}
+
+.hero-btn {
+    margin-top: 20px;
+
+    width: 220px;
+    height: 60px;
+
+    border: none;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #facc15,
+            #22c55e
+        );
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* =========================
+   MASK
+========================= */
+
+.masked {
+    width: 450px;
+    height: 450px;
+
+    margin: auto;
+
+    background-image: url("imagenes/premier.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: url("imagenes/liga.png");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    mask-image: url("imagenes/liga.png");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/* =========================
+   DEGRADADOS
+========================= */
+
+.contenedor {
+    width: 400px;
+    height: 200px;
+
+    margin: 50px auto;
+
+    border: 3px solid #333;
+
+    background: linear-gradient(
+        135deg,
+        #f7b3c2 0%,
+        #ffffff 45%,
+        #5b8dff 100%
+    );
+}
+
+/* =========================
+   PAISAJE
+========================= */
+
+.paisaje {
+    width: 400px;
+    height: 200px;
+
+    margin: 50px auto;
+
+    border: 3px solid black;
+
+    position: relative;
+
+    background: linear-gradient(
+        to bottom,
+        #d89a3d 0%,
+        #f2d04f 50%,
+        #3aa0d8 50%,
+        #69d2ff 100%
+    );
+
+    overflow: hidden;
+}
+
+.sol {
+    width: 80px;
+    height: 80px;
+
+    background: radial-gradient(
+        circle,
+        white 0%,
+        #e5e6b0 40%,
+        rgba(235,223,223,0) 70%
+    );
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
     width: 85%;
+
     margin: 70px auto 35px auto;
     padding: 35px 40px;
 
@@ -496,8 +813,8 @@ td {
     border-radius: 28px;
 
     box-shadow:
-        0px 0px 25px rgba(250, 204, 21, 0.55),
-        0px 10px 30px rgba(0, 0, 0, 0.65);
+        0px 0px 25px rgba(250,204,21,0.55),
+        0px 10px 30px rgba(0,0,0,0.65);
 
     color: white;
 }
@@ -505,50 +822,68 @@ td {
 .footer h2 {
     color: #facc15;
     font-size: 36px;
-    margin: 0 0 12px 0;
-
-    text-align: center;
-
-    text-shadow:
-        0px 0px 12px rgba(250, 204, 21, 0.9),
-        0px 0px 22px rgba(34, 197, 94, 0.6);
 }
 
 .footer h3 {
     color: #22c55e;
     font-size: 30px;
-    margin: 10px 0 18px 0;
-
-    text-align: center;
-
-    text-shadow:
-        0px 0px 12px rgba(34, 197, 94, 0.8);
 }
 
 .footer p {
-    width: 100%;
-    margin: 10px auto;
-
-    text-align: center;
-
     font-size: 18px;
     line-height: 1.6;
 }
 
-.footer-texto {
-    max-width: 750px;
-    margin: 20px auto;
-
-    text-align: center;
-
-    color: #e5e7eb;
-}
-
 .footer-copy {
-    margin-top: 25px;
-
-    text-align: center;
-
     color: #facc15;
     font-weight: bold;
+}
+
+/* =========================
+   TEXTO GRADIENTE
+========================= */
+
+.gradient-text {
+    font-size: 80px;
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #facc15,
+            #22c55e,
+            #38bdf8,
+            #dd2476
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes entradaSeccion {
+
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes girar {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
