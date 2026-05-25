@@ -723,7 +723,7 @@ td {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 
-    mask-image: url("imagenes/liga.png");
+    mask-image: url("imagenes/serieA.png");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -886,4 +886,171 @@ td {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.inset {
+    border-style: inset;
+}
+
+.outset {
+    border-style: outset;
+}
+
+.none {
+    border-style: none;
+}
+
+.hidden {
+    border-style: hidden;
+}
+
+.borde-diferente {
+
+    width: 300px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    background: rgba(255,255,255,0.12);
+
+    border-top: 8px solid #22c55e;
+
+    border-right: 8px dotted #38bdf8;
+
+    border-bottom: 8px dashed #facc15;
+
+    border-left: 8px double #ef4444;
+
+    border-radius: 20px;
+
+    color: white;
+}
+
+.scroll-bg,
+.fixed-bg {
+
+    width: 90%;
+    height: 300px;
+
+    margin: 40px auto;
+
+    border: 5px solid #facc15;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("imagenes/cancha.png");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.scroll-bg {
+
+    background-attachment: scroll;
+}
+
+.fixed-bg {
+
+    background-attachment: fixed;
+}
+
+.local-bg {
+
+    width: 500px;
+    height: 250px;
+
+    overflow: scroll;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+    border: 5px solid #22c55e;
+
+    border-radius: 20px;
+
+    font-size: 22px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("imagenes/champions.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: local;
+
+    color: white;
+}
+
+.conic {
+
+    width: 450px;
+    height: 250px;
+
+    margin: 50px auto;
+
+    border: 5px solid #fff;
+
+    border-radius: 20px;
+
+    background: conic-gradient(
+        red,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        magenta,
+        red
+    );
+}
+
+.mask-radial {
+
+    width: 400px;
+    height: 400px;
+
+    margin: 50px auto;
+
+    background-image: url("imagenes/messi.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    -webkit-mask-image:
+        radial-gradient(
+            circle,
+            black 45%,
+            transparent 70%
+        );
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black 45%,
+            transparent 70%
+        );
 }
