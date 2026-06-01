@@ -1054,3 +1054,488 @@ td {
             transparent 70%
         );
 }
+
+/* CONTENEDOR GENERAL */
+
+.contenedor-pin3d{
+
+    width: 100%;
+
+    height: 800px;
+
+    background: #d2e4eb;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    margin-top: 100px;
+}
+
+/* CONTENEDOR 3D */
+
+.canvas-3d{
+
+    perspective: 1000px;
+
+    width: 600px;
+
+    height: 600px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* ESCENA */
+
+.scene{
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    transform-style: preserve-3d;
+
+    transform:
+    rotateX(65deg)
+    rotateZ(-20deg);
+}
+
+/* =======================
+   DISCO / BASE
+======================= */
+
+.disk{
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    top: 50%;
+
+    left: 50%;
+
+    margin-top: -225px;
+
+    margin-left: -225px;
+
+    transform-style: preserve-3d;
+}
+
+/* SUPERFICIE */
+
+.disk-top{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background-image:
+    url("imagenes/planeta.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    box-shadow:
+
+    inset 0 0 40px rgba(0,0,0,0.25),
+
+    0 0 50px rgba(0,153,255,0.4),
+
+    0 40px 80px rgba(0,0,0,0.4);
+}
+
+/* BRILLO */
+
+.disk-top::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    top: 40px;
+
+    left: 80px;
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(255,255,255,0.45),
+        transparent 70%
+    );
+
+    filter: blur(10px);
+}
+
+/* GROSOR */
+
+.disk-side{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #243949,
+        #111822
+    );
+
+    transform:
+    translateZ(-20px);
+
+    filter: brightness(0.6);
+}
+
+/* =======================
+   PIN 3D METÓDICO Y EXACTO
+======================= */
+
+.pin {
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -60px; /* Centrado perfecto */
+    margin-top: -200px; /* El pivote queda exactamente en la punta inferior */
+    transform-style: preserve-3d;
+    
+    /* Control de la escena: Ajusta la rotación global aquí */
+    transform: rotateX(-75deg) rotateY(0deg); 
+    transform-origin: bottom center;
+}
+
+/* Base común para todas las caras: todas nacen en el mismo centro */
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+/* FRENTE: Triángulo apuntando hacia abajo */
+.front {
+    width: 120px;
+    background: linear-gradient(
+        to bottom,
+        #fcd116 50%,
+        #003893 75%,
+        #ce1126 100%
+    );
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    /* Se empuja hacia adelante en el eje Z */
+    transform: translateZ(15px) rotateX(-4deg);
+    transform-origin: bottom center;
+}
+
+/* ATRÁS: Triángulo idéntico, empujado hacia atrás */
+.back {
+    width: 120px;
+    background: #151515;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    /* Se empuja hacia atrás en el eje Z y se voltea */
+    transform: rotateY(180deg) translateZ(15px) rotateX(-4deg);
+    transform-origin: bottom center;
+}
+
+
+
+.left {
+    width: 30px;
+    left: 55px; 
+
+    background: #55bbda;
+    clip-path: polygon(0% 0%, 120% 0%, 50% 100%);
+
+    transform: rotateY(-90deg) translateZ(15px) rotateX(-16deg);
+    transform-origin: bottom center;
+}
+.right {
+    width: 30px;
+    left: 40px;
+
+    background: #55bbda;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+
+    transform: rotateY(90deg) translateZ(15px) rotateX(-16deg);
+    transform-origin: bottom center;
+}
+
+/* =======================
+   CONTENEDORES DE IMAGEN
+======================= */
+
+.info-box{
+    position: absolute;
+
+    width: 180px;
+    height: 140px;
+
+    background: white;
+
+    border: 3px solid #e53935;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    z-index: 100;
+}
+
+.info-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* IZQUIERDA */
+.info-left{
+    top: 30px;
+    left: -50px;
+}
+
+/* DERECHA */
+.info-right{
+    top: 30px;
+    right: -50px;
+}
+
+/* CONTENEDOR */
+.contenedor-cajas{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ESTILO GENERAL */
+.caja{
+    width: 220px;
+    min-height: 280px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* ESPACIO PARA IMAGEN */
+.imagen{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border: 2px dashed gray;
+    border-radius: 50%;
+}
+
+/* CAJA 1 → BOX-SHADOW */
+.caja1{
+    background: rgb(201, 11, 11);
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+/* CAJA 2 → TRANSFORM + TRANSITION */
+.caja2{
+    background: white;
+    transition: .4s;
+}
+
+.caja2:hover{
+    transform: scale(1.08) rotate(3deg);
+}
+
+/* CAJA 3 → BACKDROP-FILTER */
+.caja3{
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.2);
+    color: white;
+}
+
+/* CAJA 4 → LINEAR-GRADIENT */
+.caja4{
+    background: linear-gradient(135deg, #00bfff, #8a2be2);
+    color: white;
+}
+
+/* CAJA 5 → EFECTO NEÓN */
+.caja5{
+    background: #111;
+    color: white;
+    box-shadow:
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px cyan;
+}
+
+/* CONTENEDOR */
+.contenedor-cajas{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CAJAS */
+.caja{
+    width: 170px;
+    min-height: 210px;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* MARCO DE LA IMAGEN */
+.marco-imagen{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 12px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN */
+.imagen{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* CAJA 1 - BOX SHADOW */
+.caja1{
+    background: rgb(219, 15, 15);
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+/* CAJA 2 - TRANSFORM */
+.caja2{
+    background: rgb(11, 216, 103);
+    transition: .3s;
+}
+
+.caja2:hover{
+    transform: scale(1.08);
+}
+
+/* CAJA 3 - BACKDROP FILTER */
+.caja3{
+    background: rgba(9, 11, 150, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.2);
+    color: white;
+}
+
+/* CAJA 4 - GRADIENT */
+.caja4{
+    background: linear-gradient(135deg,#00bfff,#8a2be2);
+    color: white;
+}
+
+/* CAJA 5 - NEÓN */
+.caja5{
+    background: #111;
+    color: white;
+    box-shadow:
+        0 0 10px cyan,
+        0 0 20px cyan;
+}
+
+.btn-apagar{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255,255,255,.15);
+    color: rgb(10, 199, 189);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255,59,48,.4);
+    transition: .3s;
+}
+
+.btn-apagar:hover{
+    background: #5f49be;
+    transform: scale(1.05);
+}
+
+.btn-apagar:active{
+    transform: scale(.95);
+}
+
+.texto5{
+    font-size: 40px;
+    color: rgb(24, 67, 207);
+    text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #888,
+        3px 3px 0 #777,
+        4px 4px 0 #666;
+}
+.texto4{
+    font-size: 40px;
+    color: white;
+    text-shadow:
+        0 0 5px red,
+        0 0 10px rgb(20, 216, 125),
+        0 0 20px rgb(171, 18, 209);
+}
+
+
+.hcaja{
+    width: 250px;
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+
+    /* Box Shadow con inset y rgba */
+    box-shadow:
+        inset 0 0 20px rgba(216, 6, 6, 0.15),
+        0 8px 20px rgba(17, 14, 214, 0.4);
+}
+
+.caja{
+    width: 250px;
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+
+    /* Box Shadow con inset y rgba */
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.15),
+        0 8px 20px rgba(0,0,0,.4);
+}
+
