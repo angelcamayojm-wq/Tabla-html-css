@@ -668,9 +668,9 @@
                 <p class="aviso">El texto de abajo se coloca AL LADO de las tarjetas porque el float las saca del flujo.</p>
                 <div class="contenedor-con-float">
                     <!-- SOLO 3 tarjetas para que el texto tenga espacio a la derecha -->
-                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
-                    <div class="tarjeta-campeon flotante"><img src="imagenes/champions.png" alt=""><p><strong>2023</strong> Man City</p></div>
-                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/real.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/city.png" alt=""><p><strong>2023</strong> Man City</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/Real1.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
                     <!-- NO HAY CLEARFIX -->
                 </div>
                 <!-- Este texto se coloca al lado de las tarjetas flotantes (efecto de envoltura) -->
@@ -685,9 +685,9 @@
                 <p class="aviso">El texto de abajo vuelve a estar debajo gracias al <code>clear: both</code>.</p>
                 <div class="contenedor-con-float">
                     <!-- 3 tarjetas -->
-                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
-                    <div class="tarjeta-campeon flotante"><img src="imagenes/champions.png" alt=""><p><strong>2023</strong> Man City</p></div>
-                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/Real1.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/city.png" alt=""><p><strong>2023</strong> Man City</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/real.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
                     <!-- CLEARFIX -->
                     <div class="clearfix"></div>
                 </div>
@@ -697,6 +697,92 @@
             </div>
         </section>
 
+
+                <!-- ==================== 6 PROPIEDADES DE COLUMNAS - VERSIÓN MEJORADA ==================== -->
+        <section class="seccion" id="seccion-columnas-mejoradas">
+            <h2><i class="fas fa-columns"></i> 6 Propiedades de Columnas</h2>
+            <p class="subtitulo-seccion">Cada ejemplo tiene un diseño único para resaltar su propiedad</p>
+
+            <!-- 1. COLUMN-COUNT -->
+            <div class="columna-ejemplo" id="ejemplo-count">
+                <h3>1️⃣ column-count: <span class="badge-cuatro">4</span></h3>
+                <div class="columnas-count">
+                    <p>🏆 <strong>Real Madrid</strong> – 15 títulos</p>
+                    <p>🔴 <strong>AC Milan</strong> – 7 títulos</p>
+                    <p>🔵 <strong>Bayern Múnich</strong> – 6 títulos</p>
+                    <p>🔴 <strong>Liverpool</strong> – 6 títulos</p>
+                    <p>🔵 <strong>Barcelona</strong> – 5 títulos</p>
+                    <p>🟣 <strong>Manchester City</strong> – 1 título</p>
+                </div>
+                <p class="explicacion-columnas">🔹 <code>column-count: 4</code> → 4 columnas de igual ancho.</p>
+            </div>
+
+            <!-- 2. COLUMN-WIDTH -->
+            <div class="columna-ejemplo" id="ejemplo-width">
+                <h3>2️⃣ column-width: <span class="badge-ancho">180px</span></h3>
+                <div class="columnas-width">
+                    <p>⚽ <strong>2024</strong> Real Madrid 2-0 Dortmund</p>
+                    <p>⚽ <strong>2023</strong> Man City 1-0 Inter</p>
+                    <p>⚽ <strong>2022</strong> Real Madrid 1-0 Liverpool</p>
+                    <p>⚽ <strong>2021</strong> Chelsea 1-0 Man City</p>
+                    <p>⚽ <strong>2020</strong> Bayern 1-0 PSG</p>
+                    <p>⚽ <strong>2019</strong> Liverpool 2-0 Tottenham</p>
+                </div>
+                <p class="explicacion-columnas">🔹 <code>column-width: 180px</code> → columnas se ajustan a ese ancho mínimo.</p>
+            </div>
+
+            <!-- 3. COLUMN-SPAN -->
+            <div class="columna-ejemplo" id="ejemplo-span">
+                <h3>3️⃣ column-span: <span class="badge-all">all</span></h3>
+                <div class="columnas-span">
+                    <h2 class="span-all">🏅 Goleadores históricos</h2>
+                    <p>👑 <strong>Cristiano Ronaldo</strong> – 140 goles</p>
+                    <p>🐐 <strong>Lionel Messi</strong> – 129 goles</p>
+                    <p>🇵🇱 <strong>Robert Lewandowski</strong> – 91 goles</p>
+                    <p>🇫🇷 <strong>Karim Benzema</strong> – 86 goles</p>
+                    <p>🇪🇸 <strong>Raúl González</strong> – 71 goles</p>
+                </div>
+                <p class="explicacion-columnas">🔹 <code>column-span: all</code> → el título atraviesa TODAS las columnas.</p>
+            </div>
+
+            <!-- 4. COLUMN-RULE-WIDTH -->
+            <div class="columna-ejemplo" id="ejemplo-rule-width">
+                <h3>4️⃣ column-rule-width: <span class="badge-grueso">6px</span></h3>
+                <div class="columnas-rule-width">
+                    <p>🎯 <strong>Real Madrid</strong> – 5 Champions en 10 años</p>
+                    <p>🎯 <strong>Barcelona</strong> – 2 Champions con Guardiola</p>
+                    <p>🎯 <strong>Bayern</strong> – 2 Champions (2013, 2020)</p>
+                    <p>🎯 <strong>Chelsea</strong> – 2 Champions (2012, 2021)</p>
+                    <p>🎯 <strong>Inter</strong> – 1 Champions (2010)</p>
+                </div>
+                <p class="explicacion-columnas">🔹 <code>column-rule-width: 6px</code> → línea de separación MUY gruesa.</p>
+            </div>
+
+            <!-- 5. COLUMN-RULE-STYLE -->
+            <div class="columna-ejemplo" id="ejemplo-rule-style">
+                <h3>5️⃣ column-rule-style: <span class="badge-dashed">dashed</span></h3>
+                <div class="columnas-rule-style">
+                    <p>📅 Champions se juega de septiembre a junio</p>
+                    <p>📋 Fase de grupos: 8 grupos de 4 equipos</p>
+                    <p>🗡️ Octavos: eliminatorias directas</p>
+                    <p>🏟️ Final: partido único en sede neutral</p>
+                </div>
+                <p class="explicacion-columnas">🔹 <code>column-rule-style: dashed</code> → línea de guiones.</p>
+            </div>
+
+            <!-- 6. COLUMN-RULE-COLOR -->
+            <div class="columna-ejemplo" id="ejemplo-rule-color">
+                <h3>6️⃣ column-rule-color: <span class="badge-verde">#34d399</span></h3>
+                <div class="columnas-rule-color">
+                    <p>🏟️ <strong>Wembley</strong> – 7 finales</p>
+                    <p>🏟️ <strong>Bernabéu</strong> – 4 finales</p>
+                    <p>🏟️ <strong>Camp Nou</strong> – 3 finales</p>
+                    <p>🏟️ <strong>Allianz Arena</strong> – 2025</p>
+                </div>
+                <p class="explicacion-columnas">🔹 <code>column-rule-color: #34d399</code> → línea de color verde esmeralda.</p>
+            </div>
+
+        </section>
 
         
 

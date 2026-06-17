@@ -2900,4 +2900,267 @@ table tbody tr:hover {
 }
 
 
+/* ============================================================
+   6 PROPIEDADES DE COLUMNAS - DISEÑO MEJORADO
+============================================================ */
+#seccion-columnas-mejoradas .subtitulo-seccion {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.columna-ejemplo {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border-radius: 24px;
+    padding: 24px 26px 28px;
+    margin-bottom: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.columna-ejemplo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.columna-ejemplo h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Badges para destacar valores */
+.badge-cuatro, .badge-ancho, .badge-all,
+.badge-grueso, .badge-dashed, .badge-verde {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+/* Cada ejemplo tiene un estilo de borde único */
+#ejemplo-count { border-color: #fbbf24; }
+#ejemplo-width { border-color: #34d399; }
+#ejemplo-span { border-color: #f59e0b; }
+#ejemplo-rule-width { border-color: #ef4444; }
+#ejemplo-rule-style { border-color: #60a5fa; }
+#ejemplo-rule-color { border-color: #a855f7; }
+
+/* ===== 1. COLUMN-COUNT ===== */
+.columnas-count {
+    column-count: 4;
+    column-gap: 30px;
+    column-rule: 3px solid #fbbf24;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.columnas-count p {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: rgba(251, 191, 36, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #fbbf24;
+}
+.columnas-count strong { color: #fbbf24; }
+
+/* ===== 2. COLUMN-WIDTH ===== */
+.columnas-width {
+    column-width: 180px;
+    column-gap: 25px;
+    column-rule: 3px solid #34d399;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.columnas-width p {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: rgba(52, 211, 153, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #34d399;
+}
+.columnas-width strong { color: #34d399; }
+
+/* ===== 3. COLUMN-SPAN ===== */
+.columnas-span {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 4px double #f59e0b;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.columnas-span p {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: rgba(245, 158, 11, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #f59e0b;
+}
+.columnas-span strong { color: #f59e0b; }
+
+.span-all {
+    column-span: all;
+    text-align: center;
+    color: #fbbf24;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    padding: 12px 0;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), transparent);
+    border-radius: 12px;
+    border-bottom: 3px solid #fbbf24;
+    text-shadow: 0 0 40px rgba(251, 191, 36, 0.2);
+    letter-spacing: 1px;
+}
+
+/* ===== 4. COLUMN-RULE-WIDTH ===== */
+.columnas-rule-width {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule-width: 6px;
+    column-rule-style: solid;
+    column-rule-color: #ef4444;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.columnas-rule-width p {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: rgba(239, 68, 68, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #ef4444;
+}
+.columnas-rule-width strong { color: #ef4444; }
+
+/* ===== 5. COLUMN-RULE-STYLE ===== */
+.columnas-rule-style {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule-width: 4px;
+    column-rule-style: dashed;
+    column-rule-color: #60a5fa;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.columnas-rule-style p {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: rgba(96, 165, 250, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #60a5fa;
+}
+.columnas-rule-style strong { color: #60a5fa; }
+
+/* ===== 6. COLUMN-RULE-COLOR ===== */
+.columnas-rule-color {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule-width: 4px;
+    column-rule-style: solid;
+    column-rule-color: #34d399;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.columnas-rule-color p {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: rgba(52, 211, 153, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #34d399;
+}
+.columnas-rule-color strong { color: #34d399; }
+
+/* ===== EXPLICACIÓN ===== */
+.explicacion-columnas {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 18px;
+    border-radius: 14px;
+    border-left: 5px solid #fbbf24;
+    margin-top: 18px;
+    text-align: left;
+    backdrop-filter: blur(4px);
+}
+.explicacion-columnas code {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    padding: 3px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .columnas-count { column-count: 3; }
+    .columnas-width { column-width: 150px; }
+    .columnas-span { column-count: 2; }
+    .columnas-rule-width { column-count: 2; }
+    .columnas-rule-style { column-count: 2; }
+    .columnas-rule-color { column-count: 2; }
+    .span-all { font-size: 1.6rem; }
+    .columna-ejemplo h3 { font-size: 1.3rem; }
+}
+@media (max-width: 480px) {
+    .columnas-count { column-count: 2; }
+    .columnas-width { column-width: 120px; }
+    .columnas-span { column-count: 1; }
+    .columnas-rule-width { column-count: 1; }
+    .columnas-rule-style { column-count: 1; }
+    .columnas-rule-color { column-count: 1; }
+    .columna-ejemplo { padding: 16px 14px; }
+    .span-all { font-size: 1.4rem; }
+}
+
+
 
