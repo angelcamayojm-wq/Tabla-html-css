@@ -1,682 +1,356 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Fútbol CSS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo Fútbol CSS - Proyecto Mejorado</title>
 
-    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome (opcional, para iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Tu CSS mejorado -->
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- VIDEO FONDO -->
-
+    <!-- VIDEO DE FONDO -->
     <video class="video-fondo" autoplay muted loop>
-        <source src="videos/video-futbol.mp4" type="video/mp4">
+        <source src="videos/video-futbol.mp4" type="video/mp4" />
     </video>
-
     <div class="capa-oscura"></div>
 
-    <!-- CONTENIDO -->
-
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="contenido">
 
-        <!-- PORTADA -->
-
+        <!-- ==================== PORTADA ==================== -->
         <header class="portada">
-
-            <h1>⚽ Mundo Fútbol CSS</h1>
-
-            <p>
-                Presentación de tablas, bordes,
-                formas y fondos
-            </p>
-
+            <h1><i class="fas fa-futbol"></i> Mundo Fútbol CSS</h1>
+            <p>Presentación de tablas, bordes, formas y fondos</p>
         </header>
 
-        <!-- TABLA PRINCIPAL -->
-
+        <!-- ==================== TABLA PRINCIPAL ==================== -->
         <section class="seccion">
-
-            <h2>🏆 Tabla Principal de Jugadores</h2>
-
-            <table class="tabla-principal" cellpadding="12" cellspacing="0">
-
-                <tr>
-                    <th>ID</th>
-                    <th>Jugador</th>
-                    <th>Equipo</th>
-                    <th>País</th>
-                    <th>Posición</th>
-                    <th>Dorsal</th>
-                    <th>Estado</th>
-                </tr>
-
-                <tr class="fila-verde">
-                    <td>1</td>
-                    <td>Lionel Messi</td>
-                    <td>Inter Miami</td>
-                    <td>Argentina</td>
-                    <td>Delantero</td>
-                    <td>10</td>
-                    <td>Activo</td>
-                </tr>
-
-                <tr class="fila-clara">
-                    <td>2</td>
-                    <td>Cristiano Ronaldo</td>
-                    <td>Al Nassr</td>
-                    <td>Portugal</td>
-                    <td>Delantero</td>
-                    <td>7</td>
-                    <td>Activo</td>
-                </tr>
-
-                <tr class="fila-verde">
-                    <td>3</td>
-                    <td>Neymar Jr</td>
-                    <td>Santos</td>
-                    <td>Brasil</td>
-                    <td>Extremo</td>
-                    <td>10</td>
-                    <td>Activo</td>
-                </tr>
-
-            </table>
-
-        </section>
-
-        <!-- CARDS -->
-
-        <section class="seccion jugadores">
-
-            <h2>⭐ Jugadores Legendarios</h2>
-
-            <div class="contenedor-cards">
-
-                <div class="card">
-
-                    <img src="imagenes/messi.png" alt="Messi">
-
-                    <h3>Lionel Messi</h3>
-
-                    <p>Argentina</p>
-
-                    <p>Inter Miami</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="imagenes/cristiano.png" alt="Cristiano Ronaldo">
-
-                    <h3>Cristiano Ronaldo</h3>
-
-                    <p>Portugal</p>
-
-                    <p>Al Nassr</p>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="imagenes/neymar.png" alt="Neymar">
-
-                    <h3>Neymar Jr</h3>
-
-                    <p>Brasil</p>
-
-                    <p>Santos</p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- TABLAS ALINEADAS -->
-
-        <section class="seccion">
-
-            <h2>📊 Tablas Alineadas</h2>
-
-            <div class="contenedor-tablas">
-
-                <div class="caja-tabla">
-
-                    <h3>Delanteros</h3>
-
-                    <table class="tabla-izquierda" cellpadding="10" cellspacing="0">
-
+            <h2><i class="fas fa-trophy"></i> Tabla Principal de Jugadores</h2>
+            <div class="tabla-wrapper">
+                <table class="tabla-principal">
+                    <thead>
                         <tr>
                             <th>ID</th>
                             <th>Jugador</th>
-                        </tr>
-
-                        <tr>
-                            <td>1</td>
-                            <td class="texto-izquierda">Messi</td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td class="texto-izquierda">Cristiano</td>
-                        </tr>
-
-                    </table>
-
-                </div>
-
-                <div class="caja-tabla">
-
-                    <h3>Equipos</h3>
-
-                    <table class="tabla-centro" cellpadding="10" cellspacing="0">
-
-                        <tr>
-                            <th>ID</th>
                             <th>Equipo</th>
-                        </tr>
-
-                        <tr>
-                            <td>1</td>
-                            <td class="texto-centro">Inter Miami</td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td class="texto-centro">Al Nassr</td>
-                        </tr>
-
-                    </table>
-
-                </div>
-
-                <div class="caja-tabla">
-
-                    <h3>Países</h3>
-
-                    <table class="tabla-derecha" cellpadding="10" cellspacing="0">
-
-                        <tr>
-                            <th>ID</th>
                             <th>País</th>
+                            <th>Posición</th>
+                            <th>Dorsal</th>
+                            <th>Estado</th>
                         </tr>
-
-                        <tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fila-verde">
                             <td>1</td>
-                            <td class="texto-derecha">Argentina</td>
+                            <td>Lionel Messi</td>
+                            <td>Inter Miami</td>
+                            <td>Argentina</td>
+                            <td>Delantero</td>
+                            <td>10</td>
+                            <td><span class="badge activo">Activo</span></td>
                         </tr>
-
-                        <tr>
+                        <tr class="fila-clara">
                             <td>2</td>
-                            <td class="texto-derecha">Portugal</td>
+                            <td>Cristiano Ronaldo</td>
+                            <td>Al Nassr</td>
+                            <td>Portugal</td>
+                            <td>Delantero</td>
+                            <td>7</td>
+                            <td><span class="badge activo">Activo</span></td>
                         </tr>
-
-                    </table>
-
-                </div>
-
+                        <tr class="fila-verde">
+                            <td>3</td>
+                            <td>Neymar Jr</td>
+                            <td>Santos</td>
+                            <td>Brasil</td>
+                            <td>Extremo</td>
+                            <td>10</td>
+                            <td><span class="badge activo">Activo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
         </section>
 
-        <!-- BORDES -->
+        <!-- ==================== CARDS ==================== -->
+        <section class="seccion jugadores">
+            <h2><i class="fas fa-star"></i> Jugadores Legendarios</h2>
+            <div class="contenedor-cards">
+                <div class="card">
+                    <img src="imagenes/messi.png" alt="Messi" />
+                    <h3>Lionel Messi</h3>
+                    <p><i class="fas fa-flag"></i> Argentina</p>
+                    <p><i class="fas fa-shield-alt"></i> Inter Miami</p>
+                </div>
+                <div class="card">
+                    <img src="imagenes/cristiano.png" alt="Cristiano" />
+                    <h3>Cristiano Ronaldo</h3>
+                    <p><i class="fas fa-flag"></i> Portugal</p>
+                    <p><i class="fas fa-shield-alt"></i> Al Nassr</p>
+                </div>
+                <div class="card">
+                    <img src="imagenes/neymar.png" alt="Neymar" />
+                    <h3>Neymar Jr</h3>
+                    <p><i class="fas fa-flag"></i> Brasil</p>
+                    <p><i class="fas fa-shield-alt"></i> Santos</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- ==================== TABLAS ALINEADAS ==================== -->
         <section class="seccion">
+            <h2><i class="fas fa-align-left"></i> Tablas Alineadas</h2>
+            <div class="contenedor-tablas">
+                <div class="caja-tabla">
+                    <h3>Delanteros</h3>
+                    <table class="tabla-izquierda">
+                        <tr><th>ID</th><th>Jugador</th></tr>
+                        <tr><td>1</td><td class="texto-izquierda">Messi</td></tr>
+                        <tr><td>2</td><td class="texto-izquierda">Cristiano</td></tr>
+                    </table>
+                </div>
+                <div class="caja-tabla">
+                    <h3>Equipos</h3>
+                    <table class="tabla-centro">
+                        <tr><th>ID</th><th>Equipo</th></tr>
+                        <tr><td>1</td><td class="texto-centro">Inter Miami</td></tr>
+                        <tr><td>2</td><td class="texto-centro">Al Nassr</td></tr>
+                    </table>
+                </div>
+                <div class="caja-tabla">
+                    <h3>Países</h3>
+                    <table class="tabla-derecha">
+                        <tr><th>ID</th><th>País</th></tr>
+                        <tr><td>1</td><td class="texto-derecha">Argentina</td></tr>
+                        <tr><td>2</td><td class="texto-derecha">Portugal</td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-            <h2>🧱 Ejemplos de Border Style</h2>
-
+        <!-- ==================== BORDES ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-border-all"></i> Ejemplos de Border Style</h2>
             <div class="contenedor-bordes">
-
                 <div class="borde solid">solid</div>
-
                 <div class="borde dashed">dashed</div>
-
                 <div class="borde dotted">dotted</div>
-
                 <div class="borde double">double</div>
-
                 <div class="borde groove">groove</div>
-
                 <div class="borde ridge">ridge</div>
                 <div class="borde inset">inset</div>
-
                 <div class="borde outset">outset</div>
-
                 <div class="borde none">none</div>
-
                 <div class="borde hidden">hidden</div>
-                <div class="borde-diferente">
-                Bordes Diferentes
-                </div>
-
+                <div class="borde-diferente">Bordes Diferentes</div>
             </div>
-
         </section>
 
-        <!-- FORMAS -->
-
+        <!-- ==================== FORMAS ==================== -->
         <section class="seccion">
-
-            <h2>🔵 Border Radius y Formas</h2>
-
+            <h2><i class="fas fa-circle"></i> Border Radius y Formas</h2>
             <div class="contenedor-formas">
-
                 <div class="forma balon"></div>
-
                 <div class="forma tarjeta"></div>
-
                 <div class="forma escudo"></div>
-                
-
             </div>
-
         </section>
 
-        <!-- FONDOS -->
-
+        <!-- ==================== FONDOS ==================== -->
         <section class="seccion">
-
-            <h2>🖼️ Fondos con Background</h2>
-
-            <div class="fondo-repeat">
-                <h3>Background Repeat</h3>
-            </div>
-
-            <div class="fondo-cover">
-                <h3>Background Cover</h3>
-            </div>
-
-            <div class="fondo-contain">
-                <h3>Background Contain</h3>
-            </div>
-
-            <div class="fondo-position">
-                <h3>Background Position + Size en %</h3>
-            </div>
-
+            <h2><i class="fas fa-image"></i> Fondos con Background</h2>
+            <div class="fondo-repeat"><h3>Background Repeat</h3></div>
+            <div class="fondo-cover"><h3>Background Cover</h3></div>
+            <div class="fondo-contain"><h3>Background Contain</h3></div>
+            <div class="fondo-position"><h3>Background Position + Size en %</h3></div>
         </section>
 
-        <!-- IMAGEN SUPERPUESTA -->
-
+        <!-- ==================== IMAGEN SUPERPUESTA ==================== -->
         <section class="seccion">
-
-            <h2>🎯 Imagen Sobre Otra</h2>
-
+            <h2><i class="fas fa-layer-group"></i> Imagen Sobre Otra</h2>
             <div class="imagen-superpuesta">
-
-                <h3>
-                    Tiro Libre: Fondo + Barrera + Jugador
-                </h3>
-
-                <img class="barrera-tiro"
-                    src="imagenes/barrera.png"
-                    alt="Barrera de jugadores">
-
-                <img class="jugador-tiro"
-                    src="imagenes/tirolibre.png"
-                    alt="Jugador pateando">
-
+                <h3>Tiro Libre: Fondo + Barrera + Jugador</h3>
+                <img class="barrera-tiro" src="imagenes/barrera.png" alt="Barrera" />
+                <img class="jugador-tiro" src="imagenes/tirolibre.png" alt="Jugador pateando" />
             </div>
-
         </section>
 
-        <!-- CLIP PATH -->
-
+        <!-- ==================== CLIP PATH ==================== -->
         <section class="seccion">
-
-            <h2>🔺 Formas con Clip Path</h2>
-
-            <div class="contenedor1">
-
-                <div class="card">
-
+            <h2><i class="fas fa-cut"></i> Formas con Clip Path</h2>
+            <div class="contenedor-clip">
+                <div class="card-clip">
                     <div class="triangle"></div>
-
-                    <button class="boton boton1">
-                        Messi
-                    </button>
-
+                    <button class="boton boton1">Messi</button>
                 </div>
-
-                <div class="card">
-
+                <div class="card-clip">
                     <div class="octagono"></div>
-
-                    <button class="boton boton2">
-                        Cristiano
-                    </button>
-
+                    <button class="boton boton2">Cristiano</button>
                 </div>
-
-                <div class="card">
-
+                <div class="card-clip">
                     <div class="estrella"></div>
-
-                    <button class="boton boton3">
-                        Neymar
-                    </button>
-
+                    <button class="boton boton3">Neymar</button>
                 </div>
-
             </div>
-
         </section>
 
-        <!-- HERO -->
-
+        <!-- ==================== HERO ==================== -->
         <section class="hero">
-
             <div class="hero-contenido">
-
                 <h1>⚽ Hero Football</h1>
-
-                <p>
-                    Hero section con linear-gradient,
-                    rgba y background image
-                </p>
-
-                <button class="hero-btn">
-                    Ver Más
-                </button>
-
+                <p>Hero section con linear‑gradient, rgba y background image</p>
+                <button class="hero-btn">Ver Más</button>
             </div>
-
         </section>
 
-        <!-- MASK -->
-
+        <!-- ==================== MASK ==================== -->
         <section class="seccion">
-
-            <h2>🎭 Masked Image</h2>
-
+            <h2><i class="fas fa-mask"></i> Masked Image</h2>
             <div class="masked"></div>
-
         </section>
 
         <div class="mask-radial"></div>
 
-        <!-- DEGRADADOS -->
+        <!-- ==================== DEGRADADOS ==================== -->
+        <section class="seccion degradados-section">
+            <h2><i class="fas fa-palette"></i> Degradados</h2>
+            <div class="grid-degradados">
+                <div class="degradado-lineal"></div>
+                <div class="degradado-dos-colores"></div>
+                <div class="degradado-personalizado"></div>
+                <div class="degradado-inline"></div>
+                <div class="radial-1"></div>
+                <div class="radial-2"></div>
+                <div class="radial-3"></div>
+                <div class="radial-4"></div>
+                <div class="repeating-radial"></div>
+                <div class="repeating-radial-animado"></div>
+            </div>
+        </section>
 
-        <div class="contenedor"></div>
+        <!-- ==================== PAISAJE ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-mountain-sun"></i> Paisaje con Sol</h2>
+            <div class="paisaje">
+                <div class="sol"></div>
+            </div>
+        </section>
 
-        <div class="degradado-lineal"></div>
+        <!-- ==================== BACKGROUND ATTACHMENT ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-scroll"></i> Background Attachment</h2>
+            <div class="scroll-bg"><h3>SCROLL</h3></div>
+            <div class="fixed-bg"><h3>FIXED</h3></div>
+            <div class="local-bg">
+                <p>Contenido con scroll local...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </section>
 
-        <div class="degradado-dos-colores"></div>
+        <!-- ==================== CONIC ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-circle-notch"></i> Conic Gradient</h2>
+            <div class="conic"></div>
+        </section>
 
-        <div class="degradado-personalizado"></div>
+        <!-- ==================== TEXTO GRADIENTE ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-text-height"></i> Texto con Gradiente</h2>
+            <h1 class="gradient-text">⚽ Mundo Fútbol CSS</h1>
+        </section>
 
-        <!-- LINEAR GRADIENT INLINE -->
+        <!-- ==================== FIGURA CON CLIP PATH Y GRADIENTES ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-globe-americas"></i> Figura con Clip Path y Gradientes</h2>
+            <div class="escena-css">
+                <div class="mesa-planeta">
+                    <img src="imagenes/planeta.png" alt="Planeta" />
+                    <div class="sombra-centro"></div>
+                </div>
+                <div class="puntero">
+                    <div class="rojo"></div>
+                    <div class="azul"></div>
+                    <div class="amarillo"></div>
+                </div>
+            </div>
+        </section>
 
-        <div style="
-            width: 400px;
-            height: 200px;
-            margin: 50px auto;
-            border: 2px solid #000;
-            background: linear-gradient(
-                to top right,
-                rgb(255, 0, 0),
-                white,
-                rgb(0, 4, 255)
-            );
-        ">
-        </div>
+        <!-- ==================== CAJAS CON IMÁGENES ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-boxes"></i> Cajas con Estilos Variados</h2>
+            <div class="contenedor-cajas">
+                <div class="caja caja1">
+                    <div class="marco-imagen"><img src="imagenes/cristiano.png" class="imagen" alt="Cristiano" /></div>
+                    <h3>Cristiano</h3>
+                </div>
+                <div class="caja caja2">
+                    <div class="marco-imagen"><img src="imagenes/messi.png" class="imagen" alt="Messi" /></div>
+                    <h3>Messi</h3>
+                </div>
+                <div class="caja caja3">
+                    <div class="marco-imagen"><img src="imagenes/neymar.png" class="imagen" alt="Neymar" /></div>
+                    <h3>Neymar</h3>
+                </div>
+                <div class="caja caja4">
+                    <div class="marco-imagen"><img src="imagenes/premier.png" class="imagen" alt="Premier" /></div>
+                    <h3>Premier</h3>
+                </div>
+                <div class="caja caja5">
+                    <div class="marco-imagen"><img src="imagenes/liga.png" class="imagen" alt="Liga" /></div>
+                    <h3>Liga</h3>
+                </div>
+            </div>
+        </section>
 
-        <!-- RADIAL 1 -->
+        <!-- ==================== BOTÓN APAGAR ==================== -->
+        <section class="seccion" style="text-align:center;">
+            <button class="btn-apagar">
+                <img src="imagenes/boton.png" class="imagen-boton" alt="Botón" /> Apagar
+            </button>
+        </section>
 
-        <div style="
-            height: 200px;
-            width: 400px;
-            margin: 50px auto;
-            border: 5px solid black;
+        <!-- ==================== TEXTOS CON SOMBRAS ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-font"></i> Text Shadows</h2>
+            <h1 class="texto5">Angel</h1>
+            <h1 class="texto4">Rivera</h1>
+        </section>
 
-            background-image: radial-gradient(
-                circle closest-side at 20% 20%,
-                red,
-                green,
-                orange
-            );
-        ">
-        </div>
+        <!-- ==================== CAJA CON SHADOW INSET ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-square"></i> Box Shadow Inset</h2>
+            <div class="hcaja"><h2>Esteban</h2></div>
+        </section>
 
-        <!-- RADIAL 2 -->
+        <!-- ==================== TARJETA CON ESCUDO ==================== -->
+        <section class="seccion">
+            <h2><i class="fas fa-shield-alt"></i> Tarjeta con Escudo</h2>
+            <div class="tarjeta25">
+                <img src="imagenes/escudo.png" class="imagen" alt="Escudo" />
+                <h2 class="titulo">Escudos</h2>
+            </div>
+        </section>
 
-        <div style="
-            height: 200px;
-            width: 400px;
-            margin: 50px auto;
-            border: 5px solid black;
-
-            background-image: radial-gradient(
-                circle farthest-side at 20% 20%,
-                red,
-                green,
-                orange
-            );
-        ">
-        </div>
-
-        <!-- RADIAL 3 -->
-
-        <div style="
-            height: 200px;
-            width: 400px;
-            margin: 50px auto;
-            border: 5px solid black;
-
-            background-image: radial-gradient(
-                circle farthest-corner at 20% 20%,
-                red,
-                green,
-                orange
-            );
-        ">
-        </div>
-
-        <!-- RADIAL 4 -->
-
-        <div style="
-            height: 200px;
-            width: 400px;
-            margin: 50px auto;
-            border: 5px solid black;
-
-            background-image: radial-gradient(
-                ellipse closest-corner at 20% 20%,
-                red,
-                green,
-                orange
-            );
-        ">
-        </div>
-
-        <!-- REPEATING RADIAL -->
-
-        <div style="
-            height: 200px;
-            width: 400px;
-            margin: 50px auto;
-            border: 5px solid black;
-
-            background-image: repeating-radial-gradient(
-                circle at 20% 20%,
-                rgb(255, 0, 234) 10%,
-                green 20%,
-                orange 30%
-            );
-        ">
-        </div>
-
-        <!-- REPEATING RADIAL ANIMADO -->
-
-        <div style="
-            height: 300px;
-            width: 500px;
-            margin: 50px auto;
-            border: 6px solid black;
-
-            background-image: repeating-radial-gradient(
-                circle at center,
-                #ff0000 0%,
-                #ff00ff 8%,
-                #00ffff 16%,
-                #ffff00 24%,
-                #0000ff 32%,
-                #00ff00 40%
-            );
-
-            animation: girar 5s linear infinite;
-        ">
-        </div>
-
-        <!-- PAISAJE -->
-
-        <div class="paisaje">
-
-            <div class="sol"></div>
-
-        </div>
-
-
-<section class="seccion">
-
-    <h2>📌 Background Attachment</h2>
-
-    <div class="scroll-bg">
-        <h3>SCROLL</h3>
-    </div>
-
-    <div class="fixed-bg">
-        <h3>FIXED</h3>
-    </div>
-
-    <div class="local-bg">
-
-        
-    </div>
-
-</section>
-        <div class="conic"></div>
-
-
-        <h1 class="gradient-text">
-    ⚽ Mundo Fútbol CSS
-</h1>
-
-
-<section class="seccion">
-    
-    <h2>Figura con Clip Path y Gradientes</h2>
-
-    <div class="escena-css">
-        <div class="mesa-planeta">
-            <img src="imagenes/planeta.png" alt="Planeta Tierra">
-            <div class="sombra-centro"></div>
-        </div>
-
-        <div class="puntero">
-            <div class="rojo"></div>
-            <div class="azul"></div>
-            <div class="amarillo"></div>
-        </div>
-    </div>
-</section>
-
-<div class="contenedor-cajas">
-
-    <div class="caja caja1">
-        <div class="marco-imagen">
-            <img src="imagenes/cristiano.png" class="imagen">
-        </div>
-        <h3>Cristiano</h3>
-        
-    </div>
-
-    <div class="caja caja2">
-        <div class="marco-imagen">
-            <img src="imagenes/messi.png" class="imagen">
-        </div>
-        <h3>Messi</h3>
-        
-    </div>
-
-    <div class="caja caja3">
-        <div class="marco-imagen">
-            <img src="imagenes/neymar.png" class="imagen">
-        </div>
-        <h3>Neymar</h3>
-        
-    </div>
-
-    <div class="caja caja4">
-        <div class="marco-imagen">
-            <img src="imagenes/premier.png" class="imagen">
-        </div>
-        <h3>Premier</h3>
-        
-    </div>
-
-    <div class="caja caja5">
-        <div class="marco-imagen">
-            <img src="imagenes/liga.png" class="imagen">
-        </div>
-        <h3>Liga</h3>
-        
-    </div>
-
-</div>
-
-<button class="btn-apagar">
-     <img src="imagenes/boton.png" class="imagen">
-    
-</button>
-
-</div>
-
-<h1 class="texto5">Angel</h1>
-<h1 class="texto4">Rivera</h1>
-
-<div class="hcaja">
-    <h2>Esteban</h2>
-</div>
-
-<div class="tarjeta25">
-    <img src="imagenes/escudo.png" class="imagen">
-
-    <h2 class="titulo">Escudos</h2>
-</div>
-
-
-        <!-- FOOTER -->
-
+        <!-- ==================== FOOTER ==================== -->
         <footer class="footer">
-
             <h2>⚽ Mundo Fútbol CSS</h2>
-
             <p>Proyecto realizado por:</p>
-
             <h3>Angel Esteban Rivera Camayo</h3>
-
             <p class="footer-texto">
-
-                Página creada como práctica de HTML y CSS
-                usando tablas, fondos, bordes,
-                imágenes superpuestas, video de fondo
-                y efectos visuales.
-
+                Página creada como práctica de HTML y CSS usando tablas, fondos, bordes,
+                imágenes superpuestas, video de fondo y efectos visuales.
             </p>
-
-            <p class="footer-copy">
-                © 2026 - Proyecto académico SENA
-            </p>
-
+            <p class="footer-copy">© 2026 - Proyecto académico SENA</p>
         </footer>
 
     </main>
-
 </body>
-
 </html>
