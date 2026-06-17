@@ -188,3 +188,84 @@ document.addEventListener('DOMContentLoaded', function() {
     btnReiniciar.addEventListener('click', iniciarJuego);
     iniciarJuego();
 });
+
+// ============================================================
+// BANNER PUBLICITARIO FIJO (ABRIR/CERRAR) - VERSIÓN CORREGIDA
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener elementos
+    const banner = document.getElementById('bannerPublicitario');
+    const btnCerrar = document.getElementById('cerrarBanner');
+    const btnMostrar = document.getElementById('btnMostrarBanner');
+
+    // Verificar que existan
+    if (!banner) {
+        console.warn('Banner no encontrado');
+        return;
+    }
+    if (!btnCerrar) {
+        console.warn('Botón cerrar no encontrado');
+        return;
+    }
+    if (!btnMostrar) {
+        console.warn('Botón mostrar no encontrado');
+        return;
+    }
+
+    // Función para cerrar el banner
+    function cerrarBanner() {
+        banner.classList.add('oculto');
+        btnMostrar.style.display = 'block';
+    }
+
+    // Función para mostrar el banner
+    function mostrarBanner() {
+        banner.classList.remove('oculto');
+        btnMostrar.style.display = 'none';
+    }
+
+    // Asignar eventos
+    btnCerrar.addEventListener('click', cerrarBanner);
+    btnMostrar.addEventListener('click', mostrarBanner);
+
+    console.log('✅ Banner inicializado correctamente');
+});
+
+// ============================================================
+// MENÚ STICKY MEJORADO - OCULTAR / MOSTRAR
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    var menu = document.getElementById('menuSticky');
+    var btnCerrar = document.getElementById('cerrarMenu');
+    var btnMostrar = document.getElementById('btnMostrarMenu');
+
+    // Verificar que los elementos existan
+    if (!menu || !btnCerrar || !btnMostrar) {
+        console.warn('No se encontraron los elementos del menú sticky.');
+        return;
+    }
+
+    // Cerrar menú
+    btnCerrar.addEventListener('click', function() {
+        menu.classList.add('oculto');
+        btnMostrar.style.display = 'flex';
+    });
+
+    // Mostrar menú
+    btnMostrar.addEventListener('click', function() {
+        menu.classList.remove('oculto');
+        btnMostrar.style.display = 'none';
+    });
+
+    // Si el menú está visible al cargar, ocultar el botón flotante
+    if (!menu.classList.contains('oculto')) {
+        btnMostrar.style.display = 'none';
+    }
+
+    console.log('Menú sticky mejorado inicializado correctamente.');
+});
+
+
+
+

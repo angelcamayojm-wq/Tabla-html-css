@@ -1915,148 +1915,989 @@ table tbody tr:hover {
 
 .contenedor-posicionamiento {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 20px auto;
+    gap: 25px;
 }
 
-.caja-relative {
+/* Contenedor padre (relative) */
+.caja-relativa {
     position: relative;
-    width: 400px;
+    width: 500px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.5);
     border: 3px solid #fbbf24;
-    border-radius: 24px;
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
-    transition: all 0.3s;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.2);
+    margin: 0 auto;
 }
 
-.caja-relative:hover {
-    box-shadow: 0 0 50px rgba(251, 191, 36, 0.4);
-}
-
-.caja-absolute {
+/* Cuadros absolutos (todos con position: absolute) */
+.cuadro-absoluto {
     position: absolute;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #1e293b, #334155);
-    border: 2px solid #34d399;
-    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.9rem;
-    color: #fbbf24;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
 }
 
-.caja-absolute:hover {
+.cuadro-absoluto:hover {
     transform: scale(1.1);
-    border-color: #fbbf24;
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
 }
 
-/* Esquinas */
-.caja-absolute.tl {
-    top: 10px;
-    left: 10px;
-    border-color: #34d399;
+/* Esquina superior izquierda */
+.esquina-tl {
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border: 2px solid #ef4444;
 }
 
-.caja-absolute.tr {
-    top: 10px;
-    right: 10px;
-    border-color: #60a5fa;
+/* Esquina superior derecha */
+.esquina-tr {
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: 2px solid #3b82f6;
 }
 
-.caja-absolute.bl {
-    bottom: 10px;
-    left: 10px;
-    border-color: #f472b6;
+/* Esquina inferior izquierda */
+.esquina-bl {
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: 2px solid #22c55e;
 }
 
-.caja-absolute.br {
-    bottom: 10px;
-    right: 10px;
-    border-color: #fbbf24;
+/* Esquina inferior derecha */
+.esquina-br {
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border: 2px solid #f59e0b;
 }
 
-/* Centro */
-.caja-absolute.centro {
+/* Centro (con transform para centrar exacto) */
+.centro {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    border: 2px solid #a855f7;
     width: 70px;
     height: 70px;
-    border-color: #facc15;
-    background: linear-gradient(135deg, #0b1a1e, #1a3a3f);
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 /* Leyenda */
-.leyenda-posicion {
+.leyenda-posicionamiento {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px 30px;
-    margin-top: 25px;
-    padding: 15px 20px;
     background: rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
     border-radius: 16px;
-    border-left: 4px solid #fbbf24;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.leyenda-posicion p {
+.leyenda-posicionamiento p {
     color: #cbd5e1;
     font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    margin: 0;
 }
 
-.leyenda-posicion .tag {
+.leyenda-posicionamiento .tag-pos {
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    padding: 2px 10px;
     border-radius: 6px;
-    text-align: center;
-    line-height: 28px;
     font-weight: 700;
-    font-size: 0.7rem;
     color: #fff;
+    margin-right: 4px;
 }
 
-.tag.tl { background: #34d399; }
-.tag.tr { background: #60a5fa; }
-.tag.bl { background: #f472b6; }
-.tag.br { background: #fbbf24; color: #0b1a1e; }
-.tag.centro { background: #facc15; color: #0b1a1e; }
+/* Colores de los tags (coinciden con los cuadros) */
+.tag-pos:nth-child(1) { background: #ef4444; } /* TL */
+.tag-pos:nth-child(2) { background: #3b82f6; } /* TR */
+.tag-pos:nth-child(3) { background: #22c55e; } /* BL */
+.tag-pos:nth-child(4) { background: #f59e0b; } /* BR */
+.tag-pos:nth-child(5) { background: #a855f7; } /* C */
 
 /* Responsive */
-@media (max-width: 500px) {
-    .caja-relative {
-        width: 280px;
-        height: 280px;
+@media (max-width: 600px) {
+    .caja-relativa {
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
     }
-    .caja-absolute {
-        width: 45px;
-        height: 45px;
-        font-size: 0.7rem;
+    .cuadro-absoluto {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
     }
-    .caja-absolute.centro {
-        width: 55px;
-        height: 55px;
+    .centro {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    .esquina-tl { top: 12px; left: 12px; }
+    .esquina-tr { top: 12px; right: 12px; }
+    .esquina-bl { bottom: 12px; left: 12px; }
+    .esquina-br { bottom: 12px; right: 12px; }
+    .leyenda-posicionamiento {
+        gap: 8px 20px;
+        padding: 12px 16px;
         font-size: 0.8rem;
-    }
-    .leyenda-posicion {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
     }
 }
 
+/* ============================================================
+   BANNER PUBLICITARIO FIJO (POSITION: FIXED)
+============================================================ */
+#seccion-banner .subtitulo-seccion {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.contenedor-banner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contenedor-banner p:first-child {
+    text-align: center;
+    color: #fbbf24;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.texto-ejemplo {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.texto-ejemplo p {
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+   BANNER FIJO (position: fixed)
+============================================================ */
+.banner-fijo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(11, 26, 30, 0.98), rgba(30, 58, 63, 0.98));
+    border-top: 3px solid #fbbf24;
+    padding: 15px 25px;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.banner-fijo.oculto {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.banner-contenido {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Imágenes de jugadores */
+.banner-imagenes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-jugador {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fbbf24;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.vs {
+    color: #fbbf24;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+}
+
+/* Texto del banner */
+.banner-texto {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.banner-texto h3 {
+    color: #fbbf24;
+    font-size: 1.2rem;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+}
+
+.banner-texto p {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin: 0 0 8px 0;
+}
+
+.btn-votar {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #0b1a1e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.btn-votar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+}
+
+/* Botón cerrar (X) */
+.btn-cerrar-banner {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    line-height: 1;
+    padding: 5px 10px;
+}
+
+.btn-cerrar-banner:hover {
+    color: #ef4444;
+    transform: scale(1.2);
+}
+
+/* Botón flotante para mostrar el banner (cuando está oculto) */
+.btn-mostrar-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #0b1a1e;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+    z-index: 9998;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-mostrar-banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(251, 191, 36, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .banner-contenido {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .banner-texto {
+        text-align: center;
+    }
+    .banner-fijo {
+        padding: 12px 16px;
+    }
+    .img-jugador {
+        width: 45px;
+        height: 45px;
+    }
+    .btn-cerrar-banner {
+        top: 5px;
+        right: 12px;
+        font-size: 1.3rem;
+    }
+    .banner-texto h3 {
+        font-size: 1rem;
+    }
+    .banner-texto p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================================
+   FLOAT Y CLEAR - DIFERENCIA VISIBLE
+============================================================ */
+#seccion-float-diferencia .subtitulo-seccion {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.float-ejemplo {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px 20px 25px;
+    margin-bottom: 30px;
+}
+
+.float-ejemplo h3 {
+    color: #fbbf24;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.aviso {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Tarjetas (reutilizables) */
+.tarjeta-campeon {
+    display: inline-block; /* Por defecto, pero se sobreescribe con .flotante */
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 12px 16px;
+    margin: 8px 10px;
+    min-width: 120px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.tarjeta-campeon:hover {
+    transform: translateY(-4px);
+    border-color: #fbbf24;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+.tarjeta-campeon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 6px;
+}
+
+.tarjeta-campeon p {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.tarjeta-campeon p strong {
+    color: #fbbf24;
+}
+
+/* Contenedor SIN FLOAT (inline-block) */
+.contenedor-sin-float {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Contenedor CON FLOAT */
+.contenedor-con-float {
+    padding: 10px 0;
+    overflow: auto; /* Para contener los flotados y evitar que se salgan */
+}
+
+.tarjeta-campeon.flotante {
+    float: left; /* Aplicamos float */
+    display: block; /* Para que el float funcione, debe ser block */
+    margin: 8px 12px;
+}
+
+/* Clearfix (para el tercer bloque) */
+.clearfix {
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+/* Texto que aparece debajo o al lado */
+.texto-debajo {
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos específicos para cada caso */
+.texto-debajo.sin-float {
+    background: rgba(52, 211, 153, 0.15);
+    border-color: #34d399;
+    color: #cbd5e1;
+}
+
+.texto-debajo.con-float-sin-clear {
+    background: rgba(251, 191, 36, 0.15);
+    border-color: #fbbf24;
+    color: #cbd5e1;
+    /* Este texto flota a la derecha de las tarjetas porque no hay clear */
+    /* No se necesita código extra, es el efecto natural del float */
+}
+
+.texto-debajo.con-float-con-clear {
+    background: rgba(96, 165, 250, 0.15);
+    border-color: #60a5fa;
+    color: #cbd5e1;
+}
+
+.texto-debajo strong {
+    color: #fbbf24;
+}
+
+.texto-debajo code {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .tarjeta-campeon {
+        min-width: 100px;
+        padding: 10px 12px;
+        margin: 6px 8px;
+    }
+    .tarjeta-campeon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* ============================================================
+   MENÚ STICKY (POSITION: STICKY)
+============================================================ */
+.menu-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, rgba(11, 26, 30, 0.98), rgba(30, 58, 63, 0.98));
+    border-bottom: 3px solid #fbbf24;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.menu-sticky.oculto {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.menu-logo img {
+    border-radius: 8px;
+}
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu-lista li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-lista li a:hover {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.15);
+}
+
+.menu-lista li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: width 0.3s ease;
+}
+
+.menu-lista li a:hover::after {
+    width: 60%;
+}
+
+.menu-cerrar {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    padding: 0 8px;
+    line-height: 1;
+}
+
+.menu-cerrar:hover {
+    color: #ef4444;
+    transform: scale(1.2);
+}
+
+/* Botón flotante para mostrar el menú */
+.btn-mostrar-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0b1a1e;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+    z-index: 9998;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-mostrar-menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(251, 191, 36, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .menu-contenedor {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .menu-lista {
+        justify-content: center;
+        gap: 15px;
+    }
+    .menu-lista li a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    .menu-cerrar {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+/* ============================================================
+   MENÚ STICKY MEJORADO
+============================================================ */
+.menu-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, rgba(11, 26, 30, 0.98), rgba(20, 50, 55, 0.98));
+    backdrop-filter: blur(12px);
+    border-bottom: 3px solid #fbbf24;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    width: 100%;
+}
+
+.menu-sticky.oculto {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-contenido {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ===== LOGO ===== */
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.3));
+}
+
+.logo-texto {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.logo-dorado {
+    color: #fbbf24;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+/* ===== ENLACES ===== */
+.menu-enlaces {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-enlaces li {
+    position: relative;
+}
+
+.menu-enlaces li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-enlaces li a i {
+    font-size: 1rem;
+    color: #fbbf24;
+}
+
+.menu-enlaces li a:hover {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Subrayado animado */
+.menu-enlaces li a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu-enlaces li a:hover::after {
+    width: 70%;
+}
+
+/* ===== SUBMENÚ DROPDOWN ===== */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(11, 26, 30, 0.98);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 12px;
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    list-style: none;
+}
+
+.menu-dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    padding-left: 28px;
+}
+
+/* ===== BARRA DE BÚSQUEDA ===== */
+.menu-busqueda {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.menu-busqueda:focus-within {
+    border-color: #fbbf24;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.15);
+}
+
+.menu-busqueda input {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 0.9rem;
+    outline: none;
+    width: 160px;
+}
+
+.menu-busqueda input::placeholder {
+    color: #94a3b8;
+}
+
+.menu-busqueda button {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    padding: 8px 16px 8px 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+.menu-busqueda button:hover {
+    color: #fbbf24;
+}
+
+/* ===== BOTÓN CERRAR ===== */
+.btn-cerrar-menu {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0 8px;
+    line-height: 1;
+}
+
+.btn-cerrar-menu:hover {
+    color: #ef4444;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* ===== BOTÓN FLOTANTE PARA MOSTRAR MENÚ ===== */
+.btn-mostrar-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0b1a1e;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+    z-index: 9998;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-mostrar-menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(251, 191, 36, 0.7);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .menu-busqueda input {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-contenido {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .menu-logo {
+        justify-content: center;
+    }
+
+    .menu-enlaces {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .menu-enlaces li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        margin-top: 4px;
+        display: none;
+    }
+
+    .menu-dropdown:hover .submenu {
+        display: block;
+    }
+
+    .submenu li a {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+
+    .menu-busqueda {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu-busqueda input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn-cerrar-menu {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-size: 1.5rem;
+    }
+
+    .btn-mostrar-menu {
+        top: 12px;
+        left: 12px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-texto {
+        font-size: 1.2rem;
+    }
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+    .menu-enlaces li a {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    .menu-enlaces li a i {
+        font-size: 0.8rem;
+    }
+}
 
 
 

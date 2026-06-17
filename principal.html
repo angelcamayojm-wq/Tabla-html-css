@@ -14,6 +14,47 @@
 </head>
 <body>
 
+        <!-- ==================== MENÚ STICKY MEJORADO ==================== -->
+    <nav id="menuSticky" class="menu-sticky">
+        <div class="menu-contenido">
+            <!-- LOGO -->
+            <div class="menu-logo">
+                <img src="imagenes/champions.png" alt="Champions" class="logo-img">
+                <span class="logo-texto">Champions <span class="logo-dorado">League</span></span>
+            </div>
+
+            <!-- ENLACES PRINCIPALES -->
+            <ul class="menu-enlaces">
+                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#champions"><i class="fas fa-trophy"></i> Champions</a></li>
+                <li class="menu-dropdown">
+                    <a href="#equipos"><i class="fas fa-shield-alt"></i> Equipos <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#real-madrid">Real Madrid</a></li>
+                        <li><a href="#barcelona">Barcelona</a></li>
+                        <li><a href="#bayern">Bayern Múnich</a></li>
+                        <li><a href="#liverpool">Liverpool</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+
+            <!-- BARRA DE BÚSQUEDA -->
+            <div class="menu-busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- BOTÓN CERRAR -->
+            <button class="btn-cerrar-menu" id="cerrarMenu">✕</button>
+        </div>
+    </nav>
+
+    <!-- Botón flotante para mostrar el menú (oculto por defecto) -->
+    <button id="btnMostrarMenu" class="btn-mostrar-menu" style="display: none;">
+        <i class="fas fa-bars"></i> Menú
+    </button>
+
     <!-- VIDEO DE FONDO -->
     <video class="video-fondo" autoplay muted loop>
         <source src="videos/video-futbol.mp4" type="video/mp4" />
@@ -544,25 +585,115 @@
 
                 <!-- ==================== POSICIONAMIENTO RELATIVE / ABSOLUTE ==================== -->
         <section class="seccion" id="seccion-posicionamiento">
-            <h2><i class="fas fa-arrows-alt"></i> Posicionamiento Relative y Absolute</h2>
-            <p class="subtitulo-seccion">Contenedor relative con 5 elementos absolute en esquinas y centro</p>
+            <h2><i class="fas fa-arrows-alt"></i> Posicionamiento Relative / Absolute</h2>
+            <p class="subtitulo-seccion">Contenedor relative con 5 cuadros absolute en las esquinas y centro</p>
 
             <div class="contenedor-posicionamiento">
-                <div class="caja-relative">
-                    <div class="caja-absolute esquina tl">TL</div>
-                    <div class="caja-absolute esquina tr">TR</div>
-                    <div class="caja-absolute esquina bl">BL</div>
-                    <div class="caja-absolute esquina br">BR</div>
-                    <div class="caja-absolute centro">CENTRO</div>
+                <!-- Contenedor padre (relative) -->
+                <div class="caja-relativa">
+                    <!-- Cuadros absolutos -->
+                    <div class="cuadro-absoluto esquina-tl">TL</div>
+                    <div class="cuadro-absoluto esquina-tr">TR</div>
+                    <div class="cuadro-absoluto esquina-bl">BL</div>
+                    <div class="cuadro-absoluto esquina-br">BR</div>
+                    <div class="cuadro-absoluto centro">C</div>
+                </div>
+
+                <!-- Leyenda -->
+                <div class="leyenda-posicionamiento">
+                    <p><span class="tag-pos">TL</span> = Top-Left (superior izquierda)</p>
+                    <p><span class="tag-pos">TR</span> = Top-Right (superior derecha)</p>
+                    <p><span class="tag-pos">BL</span> = Bottom-Left (inferior izquierda)</p>
+                    <p><span class="tag-pos">BR</span> = Bottom-Right (inferior derecha)</p>
+                    <p><span class="tag-pos">C</span> = Centro (centrado con transform)</p>
+                </div>
+            </div>
+        </section>
+
+
+
+      
+
+        <!-- ==================== BANNER FIJO (FUERA DE LA SECCIÓN) ==================== -->
+        <!-- Este banner está fuera de la sección para que sea independiente -->
+        <div id="bannerPublicitario" class="banner-fijo">
+            <button class="btn-cerrar-banner" id="cerrarBanner">✕</button>
+            <div class="banner-contenido">
+                <div class="banner-imagenes">
+                    <img src="imagenes/messi.png" alt="Messi" class="img-jugador">
+                    <span class="vs">VS</span>
+                    <img src="imagenes/cristiano.png" alt="Cristiano" class="img-jugador">
+                </div>
+                <div class="banner-texto">
+                    <h3>⚽ ¿Quién es el mejor de la historia?</h3>
+                    <p>Messi o Cristiano? ¡Vota ahora y gana una camiseta firmada!</p>
+                    <button class="btn-votar">Votar ahora</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón flotante para mostrar el banner (aparece cuando está oculto) -->
+        <button id="btnMostrarBanner" class="btn-mostrar-banner" style="display: none;">
+            📢 Ver anuncio
+        </button>
+
+        
+                <!-- ==================== FLOAT Y CLEAR - DIFERENCIA VISIBLE ==================== -->
+        <section class="seccion" id="seccion-float-diferencia">
+            <h2><i class="fas fa-float"></i> Float vs Sin Float (Diferencia real)</h2>
+            <p class="subtitulo-seccion">Observa cómo el float afecta al flujo del texto</p>
+
+            <!-- BLOQUE 1: SIN FLOAT (inline-block) -->
+            <div class="float-ejemplo">
+                <h3>🔹 Sin Float (inline-block)</h3>
+                <p class="aviso">El texto de abajo SIEMPRE va debajo, sin importar el número de tarjetas.</p>
+                <div class="contenedor-sin-float">
+                    <!-- 6 tarjetas -->
+                    <div class="tarjeta-campeon"><img src="imagenes/escudo.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon"><img src="imagenes/champions.png" alt=""><p><strong>2023</strong> Man City</p></div>
+                    <div class="tarjeta-campeon"><img src="imagenes/escudo.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon"><img src="imagenes/champions.png" alt=""><p><strong>2021</strong> Chelsea</p></div>
+                    <div class="tarjeta-campeon"><img src="imagenes/escudo.png" alt=""><p><strong>2020</strong> Bayern</p></div>
+                    <div class="tarjeta-campeon"><img src="imagenes/champions.png" alt=""><p><strong>2019</strong> Liverpool</p></div>
+                </div>
+                <!-- Este texto siempre va debajo -->
+                <div class="texto-debajo sin-float">
+                    <p>📌 <strong>Este texto está debajo de las tarjetas.</strong> Con <code>inline-block</code>, el flujo es normal y no se necesita clear.</p>
                 </div>
             </div>
 
-            <div class="leyenda-posicion">
-                <p><span class="tag tl">TL</span> top: 0; left: 0;</p>
-                <p><span class="tag tr">TR</span> top: 0; right: 0;</p>
-                <p><span class="tag bl">BL</span> bottom: 0; left: 0;</p>
-                <p><span class="tag br">BR</span> bottom: 0; right: 0;</p>
-                <p><span class="tag centro">CENTRO</span> top: 50%; left: 50%; transform: translate(-50%, -50%);</p>
+            <!-- BLOQUE 2: CON FLOAT (SIN CLEAR) -->
+            <div class="float-ejemplo">
+                <h3>🔸 Con Float (left) SIN CLEAR</h3>
+                <p class="aviso">El texto de abajo se coloca AL LADO de las tarjetas porque el float las saca del flujo.</p>
+                <div class="contenedor-con-float">
+                    <!-- SOLO 3 tarjetas para que el texto tenga espacio a la derecha -->
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/champions.png" alt=""><p><strong>2023</strong> Man City</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
+                    <!-- NO HAY CLEARFIX -->
+                </div>
+                <!-- Este texto se coloca al lado de las tarjetas flotantes (efecto de envoltura) -->
+                <div class="texto-debajo con-float-sin-clear">
+                    <p>⚠️ <strong>¡Mira! Este texto está al lado de las tarjetas.</strong> Como no hay <code>clear</code>, el float hace que el texto se envuelva alrededor de las tarjetas flotantes.</p>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: CON FLOAT Y CLEAR (para comparar) -->
+            <div class="float-ejemplo">
+                <h3>🔸 Con Float (left) CON CLEAR</h3>
+                <p class="aviso">El texto de abajo vuelve a estar debajo gracias al <code>clear: both</code>.</p>
+                <div class="contenedor-con-float">
+                    <!-- 3 tarjetas -->
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/champions.png" alt=""><p><strong>2023</strong> Man City</p></div>
+                    <div class="tarjeta-campeon flotante"><img src="imagenes/escudo.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
+                    <!-- CLEARFIX -->
+                    <div class="clearfix"></div>
+                </div>
+                <div class="texto-debajo con-float-con-clear">
+                    <p>✅ <strong>Este texto está debajo.</strong> El <code>clear: both</code> fuerza a que los elementos siguientes aparezcan debajo de los flotados.</p>
+                </div>
             </div>
         </section>
 
