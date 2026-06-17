@@ -197,6 +197,7 @@
                     <div class="estrella"></div>
                     <button class="boton boton3">Neymar</button>
                 </div>
+                
             </div>
         </section>
 
@@ -311,11 +312,13 @@
         </section>
 
         <!-- ==================== BOTÓN APAGAR ==================== -->
-        <section class="seccion" style="text-align:center;">
-            <button class="btn-apagar">
-                <img src="imagenes/boton.png" class="imagen-boton" alt="Botón" /> Apagar
-            </button>
-        </section>
+    <section class="seccion" style="text-align:center;">
+    <button class="btn-apagar">
+        <i class="fas fa-power-off"></i> 
+        <span>Apagar</span>
+        <i class="fas fa-bolt" style="margin-left: 6px;"></i>
+    </button>
+    </section>
 
         <!-- ==================== TEXTOS CON SOMBRAS ==================== -->
         <section class="seccion">
@@ -339,6 +342,233 @@
             </div>
         </section>
 
+
+       
+
+    <!-- VIDEO DE FONDO -->
+    <video class="video-fondo" autoplay muted loop>
+        <source src="videos/video-futbol.mp4" type="video/mp4" />
+    </video>
+    <div class="capa-oscura"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <!-- ==================== PORTADA ==================== -->
+        <header class="portada">
+            <h1><i class="fas fa-futbol"></i> Mundo Fútbol CSS</h1>
+            <p>Presentación de tablas, bordes, formas y fondos</p>
+        </header>
+
+        <!-- ==================== DISPLAY: NONE (9 CUADROS) ==================== -->
+        <section class="seccion seccion-none">
+            <h2><i class="fas fa-times-circle"></i> Display: None</h2>
+            <p class="subtitulo-seccion">Haz clic en un número para que desaparezca (los demás se reubican)</p>
+
+            <div class="grid-numeros" id="gridNone">
+                <div class="cuadro" data-id="1">1</div>
+                <div class="cuadro" data-id="2">2</div>
+                <div class="cuadro" data-id="3">3</div>
+                <div class="cuadro" data-id="4">4</div>
+                <div class="cuadro" data-id="5">5</div>
+                <div class="cuadro" data-id="6">6</div>
+                <div class="cuadro" data-id="7">7</div>
+                <div class="cuadro" data-id="8">8</div>
+                <div class="cuadro" data-id="9">9</div>
+            </div>
+
+            <button class="btn-restaurar" id="restaurarNone">🔄 Restaurar todos (None)</button>
+
+            <p class="explicacion-demo">
+                Al hacer clic en un número, se aplica <code>display: none</code>.
+                El número desaparece <strong>y su espacio se colapsa</strong>,
+                haciendo que los demás se reubiquen.
+            </p>
+        </section>
+
+        <!-- ==================== VISIBILITY: HIDDEN (9 CUADROS) ==================== -->
+        <section class="seccion seccion-hidden">
+            <h2><i class="fas fa-eye-slash"></i> Visibility: Hidden</h2>
+            <p class="subtitulo-seccion">Haz clic en un número para que desaparezca (el espacio queda vacío)</p>
+
+            <div class="grid-numeros" id="gridHidden">
+                <div class="cuadro" data-id="1">1</div>
+                <div class="cuadro" data-id="2">2</div>
+                <div class="cuadro" data-id="3">3</div>
+                <div class="cuadro" data-id="4">4</div>
+                <div class="cuadro" data-id="5">5</div>
+                <div class="cuadro" data-id="6">6</div>
+                <div class="cuadro" data-id="7">7</div>
+                <div class="cuadro" data-id="8">8</div>
+                <div class="cuadro" data-id="9">9</div>
+            </div>
+
+            <button class="btn-restaurar" id="restaurarHidden">🔄 Restaurar todos (Hidden)</button>
+
+            <p class="explicacion-demo">
+                Al hacer clic en un número, se aplica <code>visibility: hidden</code>.
+                El número desaparece visualmente, pero <strong>sigue ocupando su espacio</strong>,
+                por lo que los demás no se mueven y queda un hueco.
+            </p>
+        </section>
+
+                  <!-- ==================== JUEGO DE MEMORIA ==================== -->
+        <section class="seccion" id="seccion-memoria">
+            <h2><i class="fas fa-brain"></i> Juego de Memoria</h2>
+            <p class="subtitulo-seccion">Encuentra las parejas de emojis</p>
+
+            <div class="tablero-memoria" id="tablero">
+                <!-- Generado por JS -->
+            </div>
+
+            <div class="controles-memoria">
+                <span id="intentos">Intentos: 0</span>
+                <span id="parejas">Parejas: 0 / 6</span>
+                <button id="reiniciar-memoria">🔄 Reiniciar</button>
+            </div>
+        </section>
+
+
+        <!-- ==================== OVERFLOW SOLO TEXTO ==================== -->
+        <section class="seccion" id="seccion-overflow-texto">
+            <h2><i class="fas fa-scroll"></i> Overflow: visible / hidden / scroll / auto</h2>
+            <p class="subtitulo-seccion">Comportamiento del texto con cada valor de overflow</p>
+
+            <div class="contenedor-overflow-texto">
+
+                <!-- 1. VISIBLE -->
+                <div class="overflow-card-texto">
+                    <h3>🟢 visible</h3>
+                    <div class="overflow-box-texto visible">
+                        <div class="texto-contenido">
+                            <p><strong>La Champions League</strong> es la máxima competición europea de clubes. El balón rueda sin límites, igual que este contenido que se desborda del contenedor.</p>
+                            <p>Equipos como Real Madrid, Bayern Múnich y Liverpool han hecho historia en este torneo.</p>
+                           
+                        </div>
+                    </div>
+                    <p class="overflow-explicacion">El texto sobresale del contenedor. Se ve fuera de los bordes.</p>
+                </div>
+
+                <!-- 2. HIDDEN -->
+                <div class="overflow-card-texto">
+                    <h3>🔴 hidden</h3>
+                    <div class="overflow-box-texto hidden">
+                        <div class="texto-contenido">
+                            <p><strong>Los escudos</strong> representan la identidad de cada club. Pero aquí, el texto se corta en los bordes, ocultando parte de la información.</p>
+                            <p>El Real Madrid tiene 14 Champions, el Milan 7, y el Liverpool 6.</p>
+                            <p>La imagen y el texto se cortan en los bordes. No se puede ver el contenido desbordado.</p>
+                        </div>
+                    </div>
+                    <p class="overflow-explicacion">El texto que se desborda queda oculto (cortado). No se puede ver.</p>
+                </div>
+
+                <!-- 3. SCROLL -->
+                <div class="overflow-card-texto">
+                    <h3>🟡 scroll</h3>
+                    <div class="overflow-box-texto scroll">
+                        <div class="texto-contenido">
+                            <p><strong>El trofeo</strong> es el premio más codiciado. Con <code>overflow: scroll</code>, siempre aparecen barras de desplazamiento, aunque el contenido quepa.</p>
+                            <p>El actual campeón es el Real Madrid, que venció al Borussia Dortmund en la final de Wembley.</p>
+                            <p>La próxima final se disputará en Múnich.</p>
+                            <p>Siempre muestra barras de desplazamiento (horizontal y vertical).</p>
+                        </div>
+                    </div>
+                    <p class="overflow-explicacion">Siempre muestra barras de desplazamiento (horizontal y vertical).</p>
+                </div>
+
+                <!-- 4. AUTO -->
+                <div class="overflow-card-texto">
+                    <h3>🟣 auto</h3>
+                    <div class="overflow-box-texto auto">
+                        <div class="texto-contenido">
+                            <p><strong>La cancha</strong> es el escenario donde ocurre la magia. Con <code>overflow: auto</code>, solo aparecen barras si el contenido es demasiado grande.</p>
+                            <p>El césped del Bernabéu, el Camp Nou o Anfield son legendarios.</p>
+                            <p>En este caso, el texto es largo y se activa el scroll vertical.</p>
+                            <p>Aparecen barras de desplazamiento solo cuando el contenido se desborda.</p>
+                        </div>
+                    </div>
+                    <p class="overflow-explicacion">Aparecen barras de desplazamiento solo cuando el contenido se desborda.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+                <!-- ==================== OVERFLOW SOLO IMÁGENES ==================== -->
+        <section class="seccion" id="seccion-overflow-imagenes-solo">
+            <h2><i class="fas fa-images"></i> Overflow en Imágenes</h2>
+            <p class="subtitulo-seccion">Cómo el overflow afecta a las imágenes (sin texto)</p>
+
+            <div class="contenedor-overflow-imagenes-solo">
+
+                <!-- 1. VISIBLE -->
+                <div class="overflow-card-imagen-solo">
+                    <h3>🟢 visible</h3>
+                    <div class="overflow-box-imagen-solo visible">
+                        <img src="imagenes/balon.png" alt="Balón">
+                    </div>
+                    <p class="overflow-explicacion">La imagen se sale del contenedor (no hay corte).</p>
+                </div>
+
+                <!-- 2. HIDDEN -->
+                <div class="overflow-card-imagen-solo">
+                    <h3>🔴 hidden</h3>
+                    <div class="overflow-box-imagen-solo hidden">
+                        <img src="imagenes/escudo.png" alt="Escudo">
+                    </div>
+                    <p class="overflow-explicacion">La imagen se corta en los bordes (parte oculta).</p>
+                </div>
+
+                <!-- 3. SCROLL -->
+                <div class="overflow-card-imagen-solo">
+                    <h3>🟡 scroll</h3>
+                    <div class="overflow-box-imagen-solo scroll">
+                        <img src="imagenes/champions.png" alt="Trofeo">
+                    </div>
+                    <p class="overflow-explicacion">Siempre muestra barras de desplazamiento.</p>
+                </div>
+
+                <!-- 4. AUTO -->
+                <div class="overflow-card-imagen-solo">
+                    <h3>🟣 auto</h3>
+                    <div class="overflow-box-imagen-solo auto">
+                        <img src="imagenes/cancha.png" alt="Cancha">
+                    </div>
+                    <p class="overflow-explicacion">Barras solo si la imagen se desborda.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+                <!-- ==================== POSICIONAMIENTO RELATIVE / ABSOLUTE ==================== -->
+        <section class="seccion" id="seccion-posicionamiento">
+            <h2><i class="fas fa-arrows-alt"></i> Posicionamiento Relative y Absolute</h2>
+            <p class="subtitulo-seccion">Contenedor relative con 5 elementos absolute en esquinas y centro</p>
+
+            <div class="contenedor-posicionamiento">
+                <div class="caja-relative">
+                    <div class="caja-absolute esquina tl">TL</div>
+                    <div class="caja-absolute esquina tr">TR</div>
+                    <div class="caja-absolute esquina bl">BL</div>
+                    <div class="caja-absolute esquina br">BR</div>
+                    <div class="caja-absolute centro">CENTRO</div>
+                </div>
+            </div>
+
+            <div class="leyenda-posicion">
+                <p><span class="tag tl">TL</span> top: 0; left: 0;</p>
+                <p><span class="tag tr">TR</span> top: 0; right: 0;</p>
+                <p><span class="tag bl">BL</span> bottom: 0; left: 0;</p>
+                <p><span class="tag br">BR</span> bottom: 0; right: 0;</p>
+                <p><span class="tag centro">CENTRO</span> top: 50%; left: 50%; transform: translate(-50%, -50%);</p>
+            </div>
+        </section>
+
+
+        
+
         <!-- ==================== FOOTER ==================== -->
         <footer class="footer">
             <h2>⚽ Mundo Fútbol CSS</h2>
@@ -352,5 +582,13 @@
         </footer>
 
     </main>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="script.js"></script>
+
 </body>
 </html>
+
+        
+
+ 
