@@ -7,23 +7,23 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-    <!-- Font Awesome (opcional, para iconos) -->
+    <!-- Font Awesome (iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Tu CSS mejorado -->
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-        <!-- ==================== MENÚ STICKY MEJORADO ==================== -->
+    <!-- ==================== MENÚ STICKY ==================== -->
     <nav id="menuSticky" class="menu-sticky">
         <div class="menu-contenido">
-            <!-- LOGO -->
+            <!-- Logo y nombre -->
             <div class="menu-logo">
                 <img src="imagenes/champions.png" alt="Champions" class="logo-img">
                 <span class="logo-texto">Champions <span class="logo-dorado">League</span></span>
             </div>
 
-            <!-- ENLACES PRINCIPALES -->
+            <!-- Enlaces de navegación -->
             <ul class="menu-enlaces">
                 <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="#champions"><i class="fas fa-trophy"></i> Champions</a></li>
@@ -39,38 +39,38 @@
                 <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
 
-            <!-- BARRA DE BÚSQUEDA -->
+            <!-- Barra de búsqueda -->
             <div class="menu-busqueda">
                 <input type="text" placeholder="Buscar...">
                 <button><i class="fas fa-search"></i></button>
             </div>
 
-            <!-- BOTÓN CERRAR -->
+            <!-- Botón cerrar menú -->
             <button class="btn-cerrar-menu" id="cerrarMenu">✕</button>
         </div>
     </nav>
 
-    <!-- Botón flotante para mostrar el menú (oculto por defecto) -->
+    <!-- Botón flotante para mostrar el menú (aparece cuando se oculta) -->
     <button id="btnMostrarMenu" class="btn-mostrar-menu" style="display: none;">
         <i class="fas fa-bars"></i> Menú
     </button>
 
-    <!-- VIDEO DE FONDO -->
+    <!-- ==================== VIDEO DE FONDO ==================== -->
     <video class="video-fondo" autoplay muted loop>
         <source src="videos/video-futbol.mp4" type="video/mp4" />
     </video>
     <div class="capa-oscura"></div>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
     <main class="contenido">
 
         <!-- ==================== PORTADA ==================== -->
-        <header class="portada">
+        <header class="portada" id="inicio">
             <h1><i class="fas fa-futbol"></i> Mundo Fútbol CSS</h1>
             <p>Presentación de tablas, bordes, formas y fondos</p>
         </header>
 
-        <!-- ==================== TABLA PRINCIPAL ==================== -->
+        <!-- ==================== TABLA PRINCIPAL DE JUGADORES ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-trophy"></i> Tabla Principal de Jugadores</h2>
             <div class="tabla-wrapper">
@@ -119,7 +119,7 @@
             </div>
         </section>
 
-        <!-- ==================== CARDS ==================== -->
+        <!-- ==================== CARDS DE JUGADORES LEGENDARIOS ==================== -->
         <section class="seccion jugadores">
             <h2><i class="fas fa-star"></i> Jugadores Legendarios</h2>
             <div class="contenedor-cards">
@@ -144,7 +144,7 @@
             </div>
         </section>
 
-        <!-- ==================== TABLAS ALINEADAS ==================== -->
+        <!-- ==================== TABLAS ALINEADAS (IZQUIERDA, CENTRO, DERECHA) ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-align-left"></i> Tablas Alineadas</h2>
             <div class="contenedor-tablas">
@@ -175,7 +175,7 @@
             </div>
         </section>
 
-        <!-- ==================== BORDES ==================== -->
+        <!-- ==================== EJEMPLOS DE BORDER-STYLE ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-border-all"></i> Ejemplos de Border Style</h2>
             <div class="contenedor-bordes">
@@ -193,7 +193,7 @@
             </div>
         </section>
 
-        <!-- ==================== FORMAS ==================== -->
+        <!-- ==================== FORMAS CON BORDER-RADIUS ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-circle"></i> Border Radius y Formas</h2>
             <div class="contenedor-formas">
@@ -203,7 +203,7 @@
             </div>
         </section>
 
-        <!-- ==================== FONDOS ==================== -->
+        <!-- ==================== FONDOS CON BACKGROUND ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-image"></i> Fondos con Background</h2>
             <div class="fondo-repeat"><h3>Background Repeat</h3></div>
@@ -212,7 +212,7 @@
             <div class="fondo-position"><h3>Background Position + Size en %</h3></div>
         </section>
 
-        <!-- ==================== IMAGEN SUPERPUESTA ==================== -->
+        <!-- ==================== IMAGEN SUPERPUESTA (TIRO LIBRE) ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-layer-group"></i> Imagen Sobre Otra</h2>
             <div class="imagen-superpuesta">
@@ -222,7 +222,7 @@
             </div>
         </section>
 
-        <!-- ==================== CLIP PATH ==================== -->
+        <!-- ==================== CLIP-PATH (FIGURAS GEOMÉTRICAS) ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-cut"></i> Formas con Clip Path</h2>
             <div class="contenedor-clip">
@@ -238,11 +238,10 @@
                     <div class="estrella"></div>
                     <button class="boton boton3">Neymar</button>
                 </div>
-                
             </div>
         </section>
 
-        <!-- ==================== HERO ==================== -->
+        <!-- ==================== HERO SECTION ==================== -->
         <section class="hero">
             <div class="hero-contenido">
                 <h1>⚽ Hero Football</h1>
@@ -251,12 +250,11 @@
             </div>
         </section>
 
-        <!-- ==================== MASK ==================== -->
+        <!-- ==================== MÁSCARA SOBRE IMAGEN ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-mask"></i> Masked Image</h2>
             <div class="masked"></div>
         </section>
-
         <div class="mask-radial"></div>
 
         <!-- ==================== DEGRADADOS ==================== -->
@@ -276,7 +274,7 @@
             </div>
         </section>
 
-        <!-- ==================== PAISAJE ==================== -->
+        <!-- ==================== PAISAJE CON SOL ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-mountain-sun"></i> Paisaje con Sol</h2>
             <div class="paisaje">
@@ -297,19 +295,19 @@
             </div>
         </section>
 
-        <!-- ==================== CONIC ==================== -->
+        <!-- ==================== CONIC GRADIENT ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-circle-notch"></i> Conic Gradient</h2>
             <div class="conic"></div>
         </section>
 
-        <!-- ==================== TEXTO GRADIENTE ==================== -->
+        <!-- ==================== TEXTO CON GRADIENTE ANIMADO ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-text-height"></i> Texto con Gradiente</h2>
             <h1 class="gradient-text">⚽ Mundo Fútbol CSS</h1>
         </section>
 
-        <!-- ==================== FIGURA CON CLIP PATH Y GRADIENTES ==================== -->
+        <!-- ==================== ESCENA CSS: PLANETA + PUNTERO ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-globe-americas"></i> Figura con Clip Path y Gradientes</h2>
             <div class="escena-css">
@@ -325,7 +323,7 @@
             </div>
         </section>
 
-        <!-- ==================== CAJAS CON IMÁGENES ==================== -->
+        <!-- ==================== CAJAS CON ESTILOS VARIADOS ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-boxes"></i> Cajas con Estilos Variados</h2>
             <div class="contenedor-cajas">
@@ -353,22 +351,22 @@
         </section>
 
         <!-- ==================== BOTÓN APAGAR ==================== -->
-    <section class="seccion" style="text-align:center;">
-    <button class="btn-apagar">
-        <i class="fas fa-power-off"></i> 
-        <span>Apagar</span>
-        <i class="fas fa-bolt" style="margin-left: 6px;"></i>
-    </button>
-    </section>
+        <section class="seccion" style="text-align:center;">
+            <button class="btn-apagar">
+                <i class="fas fa-power-off"></i>
+                <span>Apagar</span>
+                <i class="fas fa-bolt" style="margin-left: 6px;"></i>
+            </button>
+        </section>
 
-        <!-- ==================== TEXTOS CON SOMBRAS ==================== -->
+        <!-- ==================== TEXT SHADOWS ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-font"></i> Text Shadows</h2>
             <h1 class="texto5">Angel</h1>
             <h1 class="texto4">Rivera</h1>
         </section>
 
-        <!-- ==================== CAJA CON SHADOW INSET ==================== -->
+        <!-- ==================== BOX SHADOW INSET ==================== -->
         <section class="seccion">
             <h2><i class="fas fa-square"></i> Box Shadow Inset</h2>
             <div class="hcaja"><h2>Esteban</h2></div>
@@ -382,24 +380,6 @@
                 <h2 class="titulo">Escudos</h2>
             </div>
         </section>
-
-
-       
-
-    <!-- VIDEO DE FONDO -->
-    <video class="video-fondo" autoplay muted loop>
-        <source src="videos/video-futbol.mp4" type="video/mp4" />
-    </video>
-    <div class="capa-oscura"></div>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="contenido">
-
-        <!-- ==================== PORTADA ==================== -->
-        <header class="portada">
-            <h1><i class="fas fa-futbol"></i> Mundo Fútbol CSS</h1>
-            <p>Presentación de tablas, bordes, formas y fondos</p>
-        </header>
 
         <!-- ==================== DISPLAY: NONE (9 CUADROS) ==================== -->
         <section class="seccion seccion-none">
@@ -453,7 +433,7 @@
             </p>
         </section>
 
-                  <!-- ==================== JUEGO DE MEMORIA ==================== -->
+        <!-- ==================== JUEGO DE MEMORIA ==================== -->
         <section class="seccion" id="seccion-memoria">
             <h2><i class="fas fa-brain"></i> Juego de Memoria</h2>
             <p class="subtitulo-seccion">Encuentra las parejas de emojis</p>
@@ -469,28 +449,22 @@
             </div>
         </section>
 
-
-        <!-- ==================== OVERFLOW SOLO TEXTO ==================== -->
+        <!-- ==================== OVERFLOW EN TEXTO ==================== -->
         <section class="seccion" id="seccion-overflow-texto">
             <h2><i class="fas fa-scroll"></i> Overflow: visible / hidden / scroll / auto</h2>
             <p class="subtitulo-seccion">Comportamiento del texto con cada valor de overflow</p>
 
             <div class="contenedor-overflow-texto">
-
-                <!-- 1. VISIBLE -->
                 <div class="overflow-card-texto">
                     <h3>🟢 visible</h3>
                     <div class="overflow-box-texto visible">
                         <div class="texto-contenido">
                             <p><strong>La Champions League</strong> es la máxima competición europea de clubes. El balón rueda sin límites, igual que este contenido que se desborda del contenedor.</p>
                             <p>Equipos como Real Madrid, Bayern Múnich y Liverpool han hecho historia en este torneo.</p>
-                           
                         </div>
                     </div>
                     <p class="overflow-explicacion">El texto sobresale del contenedor. Se ve fuera de los bordes.</p>
                 </div>
-
-                <!-- 2. HIDDEN -->
                 <div class="overflow-card-texto">
                     <h3>🔴 hidden</h3>
                     <div class="overflow-box-texto hidden">
@@ -502,8 +476,6 @@
                     </div>
                     <p class="overflow-explicacion">El texto que se desborda queda oculto (cortado). No se puede ver.</p>
                 </div>
-
-                <!-- 3. SCROLL -->
                 <div class="overflow-card-texto">
                     <h3>🟡 scroll</h3>
                     <div class="overflow-box-texto scroll">
@@ -516,8 +488,6 @@
                     </div>
                     <p class="overflow-explicacion">Siempre muestra barras de desplazamiento (horizontal y vertical).</p>
                 </div>
-
-                <!-- 4. AUTO -->
                 <div class="overflow-card-texto">
                     <h3>🟣 auto</h3>
                     <div class="overflow-box-texto auto">
@@ -530,20 +500,15 @@
                     </div>
                     <p class="overflow-explicacion">Aparecen barras de desplazamiento solo cuando el contenido se desborda.</p>
                 </div>
-
             </div>
         </section>
 
-
-
-                <!-- ==================== OVERFLOW SOLO IMÁGENES ==================== -->
+        <!-- ==================== OVERFLOW EN IMÁGENES ==================== -->
         <section class="seccion" id="seccion-overflow-imagenes-solo">
             <h2><i class="fas fa-images"></i> Overflow en Imágenes</h2>
             <p class="subtitulo-seccion">Cómo el overflow afecta a las imágenes (sin texto)</p>
 
             <div class="contenedor-overflow-imagenes-solo">
-
-                <!-- 1. VISIBLE -->
                 <div class="overflow-card-imagen-solo">
                     <h3>🟢 visible</h3>
                     <div class="overflow-box-imagen-solo visible">
@@ -551,8 +516,6 @@
                     </div>
                     <p class="overflow-explicacion">La imagen se sale del contenedor (no hay corte).</p>
                 </div>
-
-                <!-- 2. HIDDEN -->
                 <div class="overflow-card-imagen-solo">
                     <h3>🔴 hidden</h3>
                     <div class="overflow-box-imagen-solo hidden">
@@ -560,8 +523,6 @@
                     </div>
                     <p class="overflow-explicacion">La imagen se corta en los bordes (parte oculta).</p>
                 </div>
-
-                <!-- 3. SCROLL -->
                 <div class="overflow-card-imagen-solo">
                     <h3>🟡 scroll</h3>
                     <div class="overflow-box-imagen-solo scroll">
@@ -569,8 +530,6 @@
                     </div>
                     <p class="overflow-explicacion">Siempre muestra barras de desplazamiento.</p>
                 </div>
-
-                <!-- 4. AUTO -->
                 <div class="overflow-card-imagen-solo">
                     <h3>🟣 auto</h3>
                     <div class="overflow-box-imagen-solo auto">
@@ -578,28 +537,22 @@
                     </div>
                     <p class="overflow-explicacion">Barras solo si la imagen se desborda.</p>
                 </div>
-
             </div>
         </section>
 
-
-                <!-- ==================== POSICIONAMIENTO RELATIVE / ABSOLUTE ==================== -->
+        <!-- ==================== POSICIONAMIENTO RELATIVE / ABSOLUTE ==================== -->
         <section class="seccion" id="seccion-posicionamiento">
             <h2><i class="fas fa-arrows-alt"></i> Posicionamiento Relative / Absolute</h2>
             <p class="subtitulo-seccion">Contenedor relative con 5 cuadros absolute en las esquinas y centro</p>
 
             <div class="contenedor-posicionamiento">
-                <!-- Contenedor padre (relative) -->
                 <div class="caja-relativa">
-                    <!-- Cuadros absolutos -->
                     <div class="cuadro-absoluto esquina-tl">TL</div>
                     <div class="cuadro-absoluto esquina-tr">TR</div>
                     <div class="cuadro-absoluto esquina-bl">BL</div>
                     <div class="cuadro-absoluto esquina-br">BR</div>
                     <div class="cuadro-absoluto centro">C</div>
                 </div>
-
-                <!-- Leyenda -->
                 <div class="leyenda-posicionamiento">
                     <p><span class="tag-pos">TL</span> = Top-Left (superior izquierda)</p>
                     <p><span class="tag-pos">TR</span> = Top-Right (superior derecha)</p>
@@ -610,12 +563,7 @@
             </div>
         </section>
 
-
-
-      
-
-        <!-- ==================== BANNER FIJO (FUERA DE LA SECCIÓN) ==================== -->
-        <!-- Este banner está fuera de la sección para que sea independiente -->
+        <!-- ==================== BANNER PUBLICITARIO FIJO ==================== -->
         <div id="bannerPublicitario" class="banner-fijo">
             <button class="btn-cerrar-banner" id="cerrarBanner">✕</button>
             <div class="banner-contenido">
@@ -632,23 +580,19 @@
             </div>
         </div>
 
-        <!-- Botón flotante para mostrar el banner (aparece cuando está oculto) -->
         <button id="btnMostrarBanner" class="btn-mostrar-banner" style="display: none;">
             📢 Ver anuncio
         </button>
 
-        
-                <!-- ==================== FLOAT Y CLEAR - DIFERENCIA VISIBLE ==================== -->
+        <!-- ==================== FLOAT Y CLEAR ==================== -->
         <section class="seccion" id="seccion-float-diferencia">
             <h2><i class="fas fa-float"></i> Float vs Sin Float (Diferencia real)</h2>
             <p class="subtitulo-seccion">Observa cómo el float afecta al flujo del texto</p>
 
-            <!-- BLOQUE 1: SIN FLOAT (inline-block) -->
             <div class="float-ejemplo">
                 <h3>🔹 Sin Float (inline-block)</h3>
                 <p class="aviso">El texto de abajo SIEMPRE va debajo, sin importar el número de tarjetas.</p>
                 <div class="contenedor-sin-float">
-                    <!-- 6 tarjetas -->
                     <div class="tarjeta-campeon"><img src="imagenes/escudo.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
                     <div class="tarjeta-campeon"><img src="imagenes/champions.png" alt=""><p><strong>2023</strong> Man City</p></div>
                     <div class="tarjeta-campeon"><img src="imagenes/escudo.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
@@ -656,39 +600,31 @@
                     <div class="tarjeta-campeon"><img src="imagenes/escudo.png" alt=""><p><strong>2020</strong> Bayern</p></div>
                     <div class="tarjeta-campeon"><img src="imagenes/champions.png" alt=""><p><strong>2019</strong> Liverpool</p></div>
                 </div>
-                <!-- Este texto siempre va debajo -->
                 <div class="texto-debajo sin-float">
                     <p>📌 <strong>Este texto está debajo de las tarjetas.</strong> Con <code>inline-block</code>, el flujo es normal y no se necesita clear.</p>
                 </div>
             </div>
 
-            <!-- BLOQUE 2: CON FLOAT (SIN CLEAR) -->
             <div class="float-ejemplo">
                 <h3>🔸 Con Float (left) SIN CLEAR</h3>
                 <p class="aviso">El texto de abajo se coloca AL LADO de las tarjetas porque el float las saca del flujo.</p>
                 <div class="contenedor-con-float">
-                    <!-- SOLO 3 tarjetas para que el texto tenga espacio a la derecha -->
                     <div class="tarjeta-campeon flotante"><img src="imagenes/real.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
                     <div class="tarjeta-campeon flotante"><img src="imagenes/city.png" alt=""><p><strong>2023</strong> Man City</p></div>
                     <div class="tarjeta-campeon flotante"><img src="imagenes/Real1.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
-                    <!-- NO HAY CLEARFIX -->
                 </div>
-                <!-- Este texto se coloca al lado de las tarjetas flotantes (efecto de envoltura) -->
                 <div class="texto-debajo con-float-sin-clear">
                     <p>⚠️ <strong>¡Mira! Este texto está al lado de las tarjetas.</strong> Como no hay <code>clear</code>, el float hace que el texto se envuelva alrededor de las tarjetas flotantes.</p>
                 </div>
             </div>
 
-            <!-- BLOQUE 3: CON FLOAT Y CLEAR (para comparar) -->
             <div class="float-ejemplo">
                 <h3>🔸 Con Float (left) CON CLEAR</h3>
                 <p class="aviso">El texto de abajo vuelve a estar debajo gracias al <code>clear: both</code>.</p>
                 <div class="contenedor-con-float">
-                    <!-- 3 tarjetas -->
                     <div class="tarjeta-campeon flotante"><img src="imagenes/Real1.png" alt=""><p><strong>2024</strong> Real Madrid</p></div>
                     <div class="tarjeta-campeon flotante"><img src="imagenes/city.png" alt=""><p><strong>2023</strong> Man City</p></div>
                     <div class="tarjeta-campeon flotante"><img src="imagenes/real.png" alt=""><p><strong>2022</strong> Real Madrid</p></div>
-                    <!-- CLEARFIX -->
                     <div class="clearfix"></div>
                 </div>
                 <div class="texto-debajo con-float-con-clear">
@@ -697,13 +633,11 @@
             </div>
         </section>
 
-
-                <!-- ==================== 6 PROPIEDADES DE COLUMNAS - VERSIÓN MEJORADA ==================== -->
+        <!-- ==================== 6 PROPIEDADES DE COLUMNAS ==================== -->
         <section class="seccion" id="seccion-columnas-mejoradas">
             <h2><i class="fas fa-columns"></i> 6 Propiedades de Columnas</h2>
             <p class="subtitulo-seccion">Cada ejemplo tiene un diseño único para resaltar su propiedad</p>
 
-            <!-- 1. COLUMN-COUNT -->
             <div class="columna-ejemplo" id="ejemplo-count">
                 <h3>1️⃣ column-count: <span class="badge-cuatro">4</span></h3>
                 <div class="columnas-count">
@@ -717,7 +651,6 @@
                 <p class="explicacion-columnas">🔹 <code>column-count: 4</code> → 4 columnas de igual ancho.</p>
             </div>
 
-            <!-- 2. COLUMN-WIDTH -->
             <div class="columna-ejemplo" id="ejemplo-width">
                 <h3>2️⃣ column-width: <span class="badge-ancho">180px</span></h3>
                 <div class="columnas-width">
@@ -731,7 +664,6 @@
                 <p class="explicacion-columnas">🔹 <code>column-width: 180px</code> → columnas se ajustan a ese ancho mínimo.</p>
             </div>
 
-            <!-- 3. COLUMN-SPAN -->
             <div class="columna-ejemplo" id="ejemplo-span">
                 <h3>3️⃣ column-span: <span class="badge-all">all</span></h3>
                 <div class="columnas-span">
@@ -745,7 +677,6 @@
                 <p class="explicacion-columnas">🔹 <code>column-span: all</code> → el título atraviesa TODAS las columnas.</p>
             </div>
 
-            <!-- 4. COLUMN-RULE-WIDTH -->
             <div class="columna-ejemplo" id="ejemplo-rule-width">
                 <h3>4️⃣ column-rule-width: <span class="badge-grueso">6px</span></h3>
                 <div class="columnas-rule-width">
@@ -758,7 +689,6 @@
                 <p class="explicacion-columnas">🔹 <code>column-rule-width: 6px</code> → línea de separación MUY gruesa.</p>
             </div>
 
-            <!-- 5. COLUMN-RULE-STYLE -->
             <div class="columna-ejemplo" id="ejemplo-rule-style">
                 <h3>5️⃣ column-rule-style: <span class="badge-dashed">dashed</span></h3>
                 <div class="columnas-rule-style">
@@ -770,7 +700,6 @@
                 <p class="explicacion-columnas">🔹 <code>column-rule-style: dashed</code> → línea de guiones.</p>
             </div>
 
-            <!-- 6. COLUMN-RULE-COLOR -->
             <div class="columna-ejemplo" id="ejemplo-rule-color">
                 <h3>6️⃣ column-rule-color: <span class="badge-verde">#34d399</span></h3>
                 <div class="columnas-rule-color">
@@ -781,10 +710,7 @@
                 </div>
                 <p class="explicacion-columnas">🔹 <code>column-rule-color: #34d399</code> → línea de color verde esmeralda.</p>
             </div>
-
         </section>
-
-        
 
         <!-- ==================== FOOTER ==================== -->
         <footer class="footer">
@@ -800,12 +726,7 @@
 
     </main>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
+    <!-- ==================== SCRIPTS ==================== -->
     <script src="script.js"></script>
-
 </body>
 </html>
-
-        
-
- 
