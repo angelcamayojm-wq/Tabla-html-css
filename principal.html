@@ -712,6 +712,284 @@
             </div>
         </section>
 
+<!-- ==================== BARAJA DE PÓKER ALEATORIA EN ESCALERA ==================== -->
+<section class="seccion" id="seccion-baraja">
+    <h2><i class="fas fa-gem"></i> Baraja de Póker Aleatoria</h2>
+    <p class="subtitulo-seccion">6 cartas al azar en escalera. Haz clic para voltearlas.</p>
+
+    <div class="baraja-contenedor" id="barajaContenedor">
+        <!-- Las cartas se generan dinámicamente con JS -->
+    </div>
+
+    <button id="reiniciar-baraja" class="btn-restaurar">
+        <i class="fas fa-random"></i> Nuevas cartas
+    </button>
+
+    <p class="explicacion-demo">
+        Cada vez que se reinicia, se eligen 6 cartas aleatorias de la baraja de póker (52 naipes).  
+        Distribución en <strong>escalera</strong>: desplazamiento vertical y horizontal progresivo.
+    </p>
+</section>
+
+
+
+<!-- ==================== MIX BLEND MODE ==================== -->
+<section class="seccion" id="seccion-blend-mode">
+    <h2><i class="fas fa-blender"></i> Mix Blend Mode</h2>
+    <p class="subtitulo-seccion">
+        Propiedad <code>mix-blend-mode</code> aplicada a elementos sobre fondos
+    </p>
+
+    <div class="blend-grid">
+        <!-- 1. multiply -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-multiply">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>multiply</code></p>
+        </div>
+
+        <!-- 2. screen -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-screen">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>screen</code></p>
+        </div>
+
+        <!-- 3. overlay -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-overlay">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>overlay</code></p>
+        </div>
+
+        <!-- 4. darken -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-darken">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>darken</code></p>
+        </div>
+
+        <!-- 5. lighten -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-lighten">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>lighten</code></p>
+        </div>
+
+        <!-- 6. color-dodge -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-color-dodge">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>color-dodge</code></p>
+        </div>
+
+        <!-- 7. difference -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-difference">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>difference</code></p>
+        </div>
+
+        <!-- 8. exclusion -->
+        <div class="blend-card">
+            <div class="blend-fondo" style="background-image: url('imagenes/balon.png');">
+                <div class="blend-elemento blend-exclusion">
+                    <span>⚽</span>
+                </div>
+            </div>
+            <p class="blend-etiqueta"><code>exclusion</code></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== MIX BLEND MODE EN TEXTO (ESTADIO) ==================== -->
+<section class="seccion" id="seccion-blend-texto-estadio">
+    <h2><i class="fas fa-font"></i> Mix Blend Mode en Texto</h2>
+    <p class="subtitulo-seccion">
+        Texto sobre la imagen del <strong>Bernabéu</strong>: la mezcla no es un color plano
+    </p>
+
+    <div class="blend-grid">
+
+        <!-- 1. difference con blanco (el clásico) -->
+        <div class="blend-card">
+            <div class="blend-fondo blend-fondo-estadio" style="background-image: url('imagenes/real.png');">
+                <p class="blend-texto blend-txt-difference-blanco">CHAMPIONS</p>
+            </div>
+            <p class="blend-etiqueta"><code>difference</code> + blanco</p>
+        </div>
+
+        <!-- 2. exclusion con amarillo -->
+        <div class="blend-card">
+            <div class="blend-fondo blend-fondo-estadio" style="background-image: url('imagenes/real.png');">
+                <p class="blend-texto blend-txt-exclusion-amarillo">CHAMPIONS</p>
+            </div>
+            <p class="blend-etiqueta"><code>exclusion</code> + amarillo</p>
+        </div>
+
+        <!-- 3. color-burn con rojo -->
+        <div class="blend-card">
+            <div class="blend-fondo blend-fondo-estadio" style="background-image: url('imagenes/real.png');">
+                <p class="blend-texto blend-txt-color-burn-rojo">CHAMPIONS</p>
+            </div>
+            <p class="blend-etiqueta"><code>color-burn</code> + rojo</p>
+        </div>
+
+        <!-- 4. overlay con negro -->
+        <div class="blend-card">
+            <div class="blend-fondo blend-fondo-estadio" style="background-image: url('imagenes/real.png');">
+                <p class="blend-texto blend-txt-overlay-negro">CHAMPIONS</p>
+            </div>
+            <p class="blend-etiqueta"><code>overlay</code> + negro</p>
+        </div>
+
+        <!-- 5. screen con azul -->
+        <div class="blend-card">
+            <div class="blend-fondo blend-fondo-estadio" style="background-image: url('imagenes/real.png');">
+                <p class="blend-texto blend-txt-screen-azul">CHAMPIONS</p>
+            </div>
+            <p class="blend-etiqueta"><code>screen</code> + azul</p>
+        </div>
+
+        <!-- 6. multiply con dorado -->
+        <div class="blend-card">
+            <div class="blend-fondo blend-fondo-estadio" style="background-image: url('imagenes/real.png');">
+                <p class="blend-texto blend-txt-multiply-dorado">CHAMPIONS</p>
+            </div>
+            <p class="blend-etiqueta"><code>multiply</code> + dorado</p>
+        </div>
+
+    </div>
+
+    <p class="explicacion-demo" style="margin-top: 30px;">
+        El color <strong>cambia dinámicamente</strong> según la zona del estadio que pisa cada letra.
+        No es un color sólido: es una <strong>fusión matemática</strong> entre el texto y el fondo.
+        Modos como <code>difference</code> invierten los tonos; <code>color-burn</code> los quema.
+    </p>
+</section>
+
+
+
+<!-- ==================== SECCIÓN HISTORIA CHAMPIONS 2017 (REAL MADRID) ==================== -->
+<section class="seccion-licence">
+
+    <div class="lic-hero">
+        <!-- Nubes SVG -->
+        <svg class="lic-cloud lic-cloud1" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="40" rx="40" ry="18" fill="white"/>
+            <ellipse cx="35" cy="32" rx="22" ry="18" fill="white"/>
+            <ellipse cx="60" cy="28" rx="26" ry="20" fill="white"/>
+        </svg>
+        <svg class="lic-cloud lic-cloud2" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="40" rx="40" ry="18" fill="white"/>
+            <ellipse cx="35" cy="32" rx="22" ry="18" fill="white"/>
+            <ellipse cx="60" cy="28" rx="26" ry="20" fill="white"/>
+        </svg>
+        <svg class="lic-cloud lic-cloud3" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="40" rx="40" ry="18" fill="white"/>
+            <ellipse cx="35" cy="32" rx="22" ry="18" fill="white"/>
+            <ellipse cx="60" cy="28" rx="26" ry="20" fill="white"/>
+        </svg>
+        <svg class="lic-cloud lic-cloud4" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="40" rx="40" ry="18" fill="white"/>
+            <ellipse cx="35" cy="32" rx="22" ry="18" fill="white"/>
+            <ellipse cx="60" cy="28" rx="26" ry="20" fill="white"/>
+        </svg>
+        <svg class="lic-cloud lic-cloud5" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="40" rx="40" ry="18" fill="white"/>
+            <ellipse cx="35" cy="32" rx="22" ry="18" fill="white"/>
+            <ellipse cx="60" cy="28" rx="26" ry="20" fill="white"/>
+        </svg>
+        <svg class="lic-cloud lic-cloud6" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="40" rx="40" ry="18" fill="white"/>
+            <ellipse cx="35" cy="32" rx="22" ry="18" fill="white"/>
+            <ellipse cx="60" cy="28" rx="26" ry="20" fill="white"/>
+        </svg>
+
+        <div class="lic-hero-content">
+            <h1>La Duodécima</h1>
+            <p>El Real Madrid conquistó su 12ª Champions en Cardiff 2017.</p>
+        </div>
+
+        <div class="lic-car">
+            <img src="imagenes/car.png" alt="car">
+        </div>
+    </div>
+
+    <div class="lic-separator"></div>
+
+    <div class="lic-about">
+        <h2>Sobre Nosotros</h2>
+        <div class="lic-line"></div>
+        <h3>Un grupo de amantes de la Champions.</h3>
+        <p>
+            En la temporada 2016-17, el Real Madrid de Zinedine Zidane se consagró campeón de la UEFA Champions League 
+            tras derrotar 4-1 a la Juventus en la final disputada en el Millennium Stadium de Cardiff. Cristiano Ronaldo, 
+            con un doblete, fue la gran figura del partido y culminó una campaña legendaria donde anotó 12 goles en el 
+            torneo. Junto a él brillaron Casemiro, que abrió el marcador, y Marco Asensio, que selló la goleada en los 
+            minutos finales. Fue la duodécima Copa de Europa para el club blanco, que se convertía en el primer equipo 
+            en ganar dos ediciones consecutivas desde que el formato pasó a llamarse Champions League. Bajo la dirección 
+            serena de Zidane, aquel plantel combinó la experiencia de Sergio Ramos, Luka Modric y Karim Benzema con la 
+            explosividad de Isco y la solidez defensiva de Carvajal y Marcelo, escribiendo una de las páginas más 
+            gloriosas de la historia del fútbol.
+        </p>
+
+        <div class="lic-team">
+            <div class="lic-member">
+                <i class="fa-solid fa-user"></i>
+                <h4>Cristiano Ronaldo</h4>
+                <span>Delantero</span>
+            </div>
+            <div class="lic-member">
+                <i class="fa-solid fa-user"></i>
+                <h4>Sergio Ramos</h4>
+                <span>Defensa</span>
+            </div>
+            <div class="lic-member">
+                <i class="fa-solid fa-user"></i>
+                <h4>Luka Modric</h4>
+                <span>Centrocampista</span>
+            </div>
+            <div class="lic-member">
+                <i class="fa-solid fa-user"></i>
+                <h4>Keylor Navas</h4>
+                <span>Portero</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+        
+
         <!-- ==================== FOOTER ==================== -->
         <footer class="footer">
             <h2>⚽ Mundo Fútbol CSS</h2>

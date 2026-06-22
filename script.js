@@ -267,5 +267,143 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+/* ============================================================
+   BARAJA COMPLETA DE 52 CARTAS (PÓKER)
+============================================================ */
+const barajaCompleta = (() => {
+    const palos = [
+        { simbolo: '♠', color: 'negro' },
+        { simbolo: '♥', color: 'rojo' },
+        { simbolo: '♦', color: 'rojo' },
+        { simbolo: '♣', color: 'negro' }
+    ];
+    const numeros = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+    const baraja = [];
+    for (const palo of palos) {
+        for (const num of numeros) {
+            baraja.push({
+                numero: num,
+                palo: palo.simbolo,
+                color: palo.color
+            });
+        }
+    }
+    return baraja;
+})();
+
+/* ============================================================
+   SELECCIONAR 6 CARTAS ALEATORIAS (sin repetición)
+============================================================ */
+function obtenerCartasAleatorias(cantidad = 6) {
+    const mezclada = [...barajaCompleta];
+    for (let i = mezclada.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [mezclada[i], mezclada[j]] = [mezclada[j], mezclada[i]];
+    }
+    return mezclada.slice(0, cantidad);
+}
+
+/* ============================================================
+   CREAR CARTA EN ABANICO HORIZONTAL (ABSOLUTE, CENTRADA)
+============================================================ */
+function crearCartaPoker(data, index, total) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'carta-wrapper';
+
+    const cartaAncho = 170;
+    const cartaAlto = 250;
+
+    // Dimensiones del contenedor (coinciden con CSS max-width/height)
+    const contenedorAncho = 700;  // max-width del contenedor
+    const contenedorAlto = 420;   // altura del contenedor
+
+    // Desplazamiento horizontal principal, vertical mínimo
+    const espacioX = 80;  // separación horizontal entre cartas (centros)
+    const espacioY = 8;   // ligero escalón vertical para dar sensación de cascada
+
+    // Ancho total del mazo
+    const mazoAncho = (total - 1) * espacioX + cartaAncho;
+    const mazoAlto = cartaAlto; // la altura apenas cambia
+
+    // Centro del contenedor
+    const centroX = contenedorAncho / 2;
+    const centroY = contenedorAlto / 2;
+
+    // Esquina superior izquierda del mazo
+    const mazoLeft = centroX - mazoAncho / 2;
+    const mazoTop = centroY - mazoAlto / 2;
+
+    // Posición de esta carta
+    const posX = mazoLeft + index * espacioX;
+    const posY = mazoTop + index * espacioY; // ligero descenso
+
+    wrapper.style.left = posX + 'px';
+    wrapper.style.top = posY + 'px';
+    wrapper.style.zIndex = index;
+
+    // ---- CARTA INTERNA (gira en 3D) ----
+    const carta = document.createElement('div');
+    carta.className = 'carta-poker';
+
+    // Reverso
+    const reverso = document.createElement('div');
+    reverso.className = 'cara reverso';
+    carta.appendChild(reverso);
+
+    // Anverso
+    const anverso = document.createElement('div');
+    anverso.className = `cara anverso ${data.color}`;
+
+    const tl = document.createElement('div');
+    tl.className = 'esquina top-left';
+    tl.innerHTML = `${data.numero}<sup>${data.palo}</sup>`;
+    anverso.appendChild(tl);
+
+    const centro = document.createElement('div');
+    centro.className = 'simbolo-central';
+    centro.textContent = data.palo;
+    anverso.appendChild(centro);
+
+    const br = document.createElement('div');
+    br.className = 'esquina bottom-right';
+    br.innerHTML = `${data.numero}<sup>${data.palo}</sup>`;
+    anverso.appendChild(br);
+
+    carta.appendChild(anverso);
+    wrapper.appendChild(carta);
+
+    wrapper.addEventListener('click', () => {
+        carta.classList.toggle('volteada');
+    });
+
+    return wrapper;
+}
+
+/* ============================================================
+   INICIALIZAR BARAJA HORIZONTAL
+============================================================ */
+function inicializarBarajaAleatoria() {
+    const contenedor = document.getElementById('barajaContenedor');
+    if (!contenedor) return;
+    contenedor.innerHTML = '';
+
+    const cartasAleatorias = obtenerCartasAleatorias(6);
+    cartasAleatorias.forEach((data, index) => {
+        contenedor.appendChild(crearCartaPoker(data, index, cartasAleatorias.length));
+    });
+}
+
+// Reiniciar
+document.getElementById('reiniciar-baraja')?.addEventListener('click', () => {
+    document.querySelectorAll('.carta-poker').forEach(c => c.classList.remove('volteada'));
+    inicializarBarajaAleatoria();
+});
+
+// Arrancar
+document.addEventListener('DOMContentLoaded', inicializarBarajaAleatoria);
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    inicializarBarajaAleatoria();
+}
+
 
 
