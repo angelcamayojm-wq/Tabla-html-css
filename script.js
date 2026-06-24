@@ -406,4 +406,44 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 }
 
 
+/* ============================================================
+   FUNCIÓN PARA CAMBIAR IDIOMA (PSEUDOCLASE LANG)
+============================================================ */
+function cambiarIdioma(idioma) {
+    // Cambiar el atributo lang del contenedor
+    const contenedor = document.getElementById('lang-contenedor');
+    contenedor.setAttribute('lang', idioma);
+    
+    // Actualizar botones activos
+    const botones = document.querySelectorAll('.lang-btn');
+    botones.forEach(boton => {
+        boton.classList.remove('active');
+    });
+    
+    // Activar el botón correspondiente
+    const botonActivo = document.querySelector(`.lang-btn-${idioma}`);
+    if (botonActivo) {
+        botonActivo.classList.add('active');
+    }
+}
+
+/* ============================================================
+   FUNCIÓN PARA CAMBIAR DIRECCIÓN (PSEUDOCLASE DIR)
+============================================================ */
+function cambiarDireccion(direccion) {
+    const contenedor = document.getElementById('dir-contenedor');
+    contenedor.setAttribute('dir', direccion);
+    
+    const botones = document.querySelectorAll('.dir-btn');
+    botones.forEach(boton => {
+        boton.classList.remove('active');
+    });
+    
+    const botonActivo = document.querySelector(`.dir-btn-${direccion}`);
+    if (botonActivo) {
+        botonActivo.classList.add('active');
+    }
+}
+
+
 

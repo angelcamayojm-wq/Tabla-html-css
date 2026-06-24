@@ -45,6 +45,7 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
 
+            
             <!-- Botón cerrar menú -->
             <button class="btn-cerrar-menu" id="cerrarMenu">✕</button>
         </div>
@@ -984,10 +985,471 @@
 
 
 
+        <!-- ==================== SECCIÓN: PSEUDOCLASES CSS - CHAMPIONS EDITION ==================== -->
+        <!-- Demostración interactiva de pseudoclases con temática Champions League -->
+        <section class="seccion" id="seccion-pseudoclases">
+            <h2><i class="fas fa-code"></i> Test de Pseudoclases CSS</h2>
+            <p class="subtitulo-seccion">Demostración interactiva de pseudoclases con estilo Champions League</p>
+
+            <!-- ===== BLOQUE 1: HOVER & ACTIVE ===== -->
+            <!-- Botón interactivo con efectos de hover y active -->
+            <div class="pseudo-grupo">
+                <label class="pseudo-label"><i class="fas fa-hand-pointer"></i> 1 y 2. HOVER & ACTIVE</label>
+                <button class="pseudo-boton">¡INTERACTÚA CONMIGO!</button>
+                <p class="pseudo-explicacion">Pasa el ratón y haz clic para ver los efectos</p>
+            </div>
+
+            <!-- ===== BLOQUE 2: FOCUS ===== -->
+            <!-- Campo de entrada con efecto focus mejorado -->
+            <div class="pseudo-grupo">
+                <label class="pseudo-label"><i class="fas fa-keyboard"></i> 3. FOCUS</label>
+                <input type="text" class="pseudo-input" placeholder="Escribe el nombre de tu equipo favorito...">
+            </div>
+
+            <!-- ===== BLOQUE 3: FOCUS-WITHIN ===== -->
+            <!-- Contenedor que reacciona cuando algún hijo tiene el foco -->
+            <div class="pseudo-grupo">
+                <label class="pseudo-label"><i class="fas fa-vector-square"></i> 4. FOCUS-WITHIN</label>
+                <div class="pseudo-tarjeta-formulario">
+                    <p class="pseudo-texto-formulario">Haz clic en el campo de abajo para activar el efecto:</p>
+                    <input type="text" class="pseudo-input" placeholder="Tu jugador legendario favorito...">
+                </div>
+            </div>
+
+            <!-- ===== BLOQUE 4: FOCUS-VISIBLE ===== -->
+            <!-- Enlace con estilo especial para navegación por teclado -->
+            <div class="pseudo-grupo pseudo-centro">
+                <label class="pseudo-label"><i class="fas fa-tv"></i> 5. FOCUS-VISIBLE</label>
+                <a href="#" class="pseudo-enlace">Haz clic aquí... ¡O usa la tecla TAB para navegar!</a>
+                <p class="pseudo-explicacion">Presiona TAB para ver el efecto de focus-visible</p>
+            </div>
+
+            <!-- ===== BLOQUE 5: LINK, VISITED & ANY-LINK ===== -->
+<div class="pseudo-grupo">
+    <label class="pseudo-label"><i class="fas fa-link"></i> 6, 7 y 8. LINK, VISITED & ANY-LINK</label>
+    <div class="pseudo-enlaces-contenedor">
+        <!-- Enlace Visitado (Google) -->
+        <a href="https://www.google.com" target="_blank" class="pseudo-link-ubicacion">
+            <i class="fas fa-external-link-alt"></i> Enlace Visitado (Google)
+        </a>
+        <!-- Enlace No Visitado (URL inventada) -->
+        <a href="https://esta-url-no-existe-en-el-universo-2026.com" target="_blank" class="pseudo-link-ubicacion">
+            <i class="fas fa-external-link-alt"></i> Enlace No Visitado
+        </a>
+        <!-- Enlace Visitado (UEFA) -->
+        <a href="https://www.uefa.com" target="_blank" class="pseudo-link-ubicacion">
+            <i class="fas fa-external-link-alt"></i> Enlace Visitado (UEFA.com)
+        </a>
+    </div>
+</div>
+            <!-- ===== BLOQUE 6: TARGET ===== -->
+            <!-- Secciones que se activan mediante fragmentos de URL -->
+            <div class="pseudo-grupo">
+                <label class="pseudo-label"><i class="fas fa-bullseye"></i> 9. TARGET (Disparadores)</label>
+                <div class="pseudo-botones-target">
+                    <a href="#seccion-destino1" class="pseudo-btn-target pseudo-btn-target1">
+                        <i class="fas fa-star"></i> Encender Sección 1
+                    </a>
+                    <a href="#seccion-destino2" class="pseudo-btn-target pseudo-btn-target2">
+                        <i class="fas fa-trophy"></i> Encender Sección 2
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== SECCIONES DESTINO PARA TARGET ===== -->
+            <!-- Estas secciones se iluminan cuando son el objetivo del enlace -->
+            <div id="seccion-destino1" class="pseudo-seccion-destino">
+                <h3><i class="fas fa-star"></i> Sección Número 1</h3>
+                <p>¡Me has activado! La URL ahora termina en #seccion-destino1.</p>
+                <a href="#" class="pseudo-apagar">Apagar</a>
+            </div>
+
+            <div id="seccion-destino2" class="pseudo-seccion-destino">
+                <h3><i class="fas fa-trophy"></i> Sección Número 2</h3>
+                <p>¡Ahora yo! La URL ahora termina en #seccion-destino2.</p>
+                <a href="#" class="pseudo-apagar">Apagar</a>
+            </div>
+        </section>
 
 
+        <!-- ==================== SECCIÓN: PSEUDOCLASE LANG - MULTIDIOMA CHAMPIONS ==================== -->
+        <!-- Demostración de la pseudoclase :lang() con 4 idiomas -->
+        <section class="seccion" id="seccion-lang">
+            <h2><i class="fas fa-language"></i> Pseudoclase :lang() - Multidioma</h2>
+            <p class="subtitulo-seccion">Selecciona un idioma para ver el contenido en Español, English, Português o Français</p>
+
+            <!-- ===== SELECTOR DE IDIOMAS ===== -->
+            <!-- Botones para cambiar el atributo lang del contenedor -->
+            <div class="lang-selector">
+                <button class="lang-btn lang-btn-es active" onclick="cambiarIdioma('es')" title="Español">
+                    <span class="lang-bandera">🇪🇸</span>
+                    <span class="lang-nombre">Español</span>
+                </button>
+                <button class="lang-btn lang-btn-en" onclick="cambiarIdioma('en')" title="English">
+                    <span class="lang-bandera">🇬🇧</span>
+                    <span class="lang-nombre">English</span>
+                </button>
+                <button class="lang-btn lang-btn-pt" onclick="cambiarIdioma('pt')" title="Português">
+                    <span class="lang-bandera">🇧🇷</span>
+                    <span class="lang-nombre">Português</span>
+                </button>
+                <button class="lang-btn lang-btn-fr" onclick="cambiarIdioma('fr')" title="Français">
+                    <span class="lang-bandera">🇫🇷</span>
+                    <span class="lang-nombre">Français</span>
+                </button>
+            </div>
+
+            <!-- ===== CONTENEDOR MULTIDIOMA ===== -->
+            <!-- El atributo lang cambia dinámicamente con JavaScript -->
+            <div id="lang-contenedor" class="lang-contenedor" lang="es">
+                
+                <!-- Contenido en Español (lang="es") -->
+                <div class="lang-contenido" lang="es">
+                    <div class="lang-card">
+                        <div class="lang-icono">🏆</div>
+                        <h3 class="lang-titulo">Liga de Campeones de la UEFA</h3>
+                        <p class="lang-descripcion">La competición de clubes más prestigiosa del mundo. Equipos legendarios como el Real Madrid, con 15 títulos, dominan la historia del torneo.</p>
+                        <div class="lang-stats">
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">15</span>
+                                <span class="lang-stat-text">Títulos Real Madrid</span>
+                            </div>
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">1955</span>
+                                <span class="lang-stat-text">Año de fundación</span>
+                            </div>
+                        </div>
+                        <p class="lang-frase">⚽ "El fútbol es el deporte más hermoso del mundo"</p>
+                    </div>
+                </div>
+
+                <!-- Contenido en Inglés (lang="en") -->
+                <div class="lang-contenido" lang="en">
+                    <div class="lang-card">
+                        <div class="lang-icono">🏆</div>
+                        <h3 class="lang-titulo">UEFA Champions League</h3>
+                        <p class="lang-descripcion">The most prestigious club competition in the world. Legendary teams like Real Madrid, with 15 titles, dominate the tournament's history.</p>
+                        <div class="lang-stats">
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">15</span>
+                                <span class="lang-stat-text">Real Madrid Titles</span>
+                            </div>
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">1955</span>
+                                <span class="lang-stat-text">Year Founded</span>
+                            </div>
+                        </div>
+                        <p class="lang-frase">⚽ "Football is the most beautiful sport in the world"</p>
+                    </div>
+                </div>
+
+                <!-- Contenido en Portugués (lang="pt") -->
+                <div class="lang-contenido" lang="pt">
+                    <div class="lang-card">
+                        <div class="lang-icono">🏆</div>
+                        <h3 class="lang-titulo">Liga dos Campeões da UEFA</h3>
+                        <p class="lang-descripcion">A competição de clubes mais prestigiada do mundo. Equipes lendárias como o Real Madrid, com 15 títulos, dominam a história do torneio.</p>
+                        <div class="lang-stats">
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">15</span>
+                                <span class="lang-stat-text">Títulos Real Madrid</span>
+                            </div>
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">1955</span>
+                                <span class="lang-stat-text">Ano de fundação</span>
+                            </div>
+                        </div>
+                        <p class="lang-frase">⚽ "O futebol é o esporte mais bonito do mundo"</p>
+                    </div>
+                </div>
+
+                <!-- Contenido en Francés (lang="fr") -->
+                <div class="lang-contenido" lang="fr">
+                    <div class="lang-card">
+                        <div class="lang-icono">🏆</div>
+                        <h3 class="lang-titulo">Ligue des Champions de l'UEFA</h3>
+                        <p class="lang-descripcion">La compétition de clubs la plus prestigieuse au monde. Des équipes légendaires comme le Real Madrid, avec 15 titres, dominent l'histoire du tournoi.</p>
+                        <div class="lang-stats">
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">15</span>
+                                <span class="lang-stat-text">Titres Real Madrid</span>
+                            </div>
+                            <div class="lang-stat">
+                                <span class="lang-stat-num">1955</span>
+                                <span class="lang-stat-text">Année de fondation</span>
+                            </div>
+                        </div>
+                        <p class="lang-frase">⚽ "Le football est le plus beau sport du monde"</p>
+                    </div>
+                </div>
+
+            </div>
+
+       
 
 
+                <!-- ==================== SECCIÓN: PSEUDOCLASE DIR - DIRECCIÓN RTL/LTR ==================== -->
+        <!-- Demostración de la pseudoclase :dir() simulando idiomas RTL -->
+        <section class="seccion" id="seccion-dir">
+            <h2><i class="fas fa-align-left"></i> Pseudoclase :dir() - Dirección RTL/LTR</h2>
+            <p class="subtitulo-seccion">Simula cómo se vería el contenido en idiomas como Árabe o Hebreo (RTL)</p>
+
+            <!-- ===== SELECTOR DE DIRECCIÓN ===== -->
+            <div class="dir-selector">
+                <button class="dir-btn dir-btn-ltr active" onclick="cambiarDireccion('ltr')">
+                    <i class="fas fa-align-left"></i> LTR - Español/Inglés
+                </button>
+                <button class="dir-btn dir-btn-rtl" onclick="cambiarDireccion('rtl')">
+                    <i class="fas fa-align-right"></i> RTL - Como Árabe/Hebreo
+                </button>
+            </div>
+
+            <!-- ===== CONTENEDOR CON DIRECCIÓN DINÁMICA ===== -->
+            <div id="dir-contenedor" class="dir-contenedor" dir="ltr">
+                
+                <!-- Ejemplo 1: Noticia Deportiva -->
+                <div class="dir-card">
+                    <div class="dir-card-header">
+                        <span class="dir-icono-noticia">📰</span>
+                        <span class="dir-titulo-noticia">Noticia Champions League</span>
+                    </div>
+                    <div class="dir-card-body-texto">
+                        <p>El <strong>Real Madrid</strong> se coronó campeón de la Champions League 2024 tras vencer al Borussia Dortmund en la final de Wembley. Los goles de Vinícius Jr. y Jude Bellingham sellaron la victoria por 2-0.</p>
+                        <p>Este título representa la <strong>15ª Copa de Europa</strong> para el club blanco, consolidándose como el equipo más laureado de la historia del torneo.</p>
+                    </div>
+                    <div class="dir-card-footer-noticia">
+                        <span>📍 Madrid, España | 📅 Junio 2024</span>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2: Tabla de Posiciones -->
+                <div class="dir-card">
+                    <div class="dir-card-header">
+                        <span class="dir-icono-noticia">🏆</span>
+                        <span class="dir-titulo-noticia">Máximos Goleadores Históricos</span>
+                    </div>
+                    <div class="dir-tabla-wrapper">
+                        <table class="dir-tabla">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Jugador</th>
+                                    <th>Goles</th>
+                                    <th>Equipo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Cristiano Ronaldo</td>
+                                    <td>140</td>
+                                    <td>🇵🇹</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lionel Messi</td>
+                                    <td>129</td>
+                                    <td>🇦🇷</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Robert Lewandowski</td>
+                                    <td>94</td>
+                                    <td>🇵🇱</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Karim Benzema</td>
+                                    <td>90</td>
+                                    <td>🇫🇷</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+
+            
+        </section>
+
+
+                <!-- ==================== SECCIÓN: FIRST-CHILD, LAST-CHILD, NTH-CHILD ==================== -->
+        <section class="seccion" id="seccion-child">
+            <h2><i class="fas fa-list-ol"></i> first-child / last-child / nth-child</h2>
+            <p class="subtitulo-seccion">Ejemplos visuales de cada pseudoclase</p>
+
+            <!-- ===== FIRST-CHILD ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :first-child</label>
+                <p class="child-indicacion">Primer elemento de cada grupo resaltado</p>
+                <div class="child-contenedor first-child-demo">
+                    <div class="child-item">1 - SIEMPRE DORADO</div>
+                    <div class="child-item">2</div>
+                    <div class="child-item">3</div>
+                    <div class="child-item">4</div>
+                    <div class="child-item">5</div>
+                </div>
+            </div>
+
+            <!-- ===== LAST-CHILD ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :last-child</label>
+                <p class="child-indicacion">Último elemento de cada grupo resaltado</p>
+                <div class="child-contenedor last-child-demo">
+                    <div class="child-item">1</div>
+                    <div class="child-item">2</div>
+                    <div class="child-item">3</div>
+                    <div class="child-item">4</div>
+                    <div class="child-item">5 - SIEMPRE DORADO</div>
+                </div>
+            </div>
+
+            <!-- ===== NTH-CHILD (2) ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :nth-child(2)</label>
+                <p class="child-indicacion">Solo el elemento N° 2 resaltado</p>
+                <div class="child-contenedor nth2-demo">
+                    <div class="child-item">1</div>
+                    <div class="child-item">2 - DORADO</div>
+                    <div class="child-item">3</div>
+                    <div class="child-item">4</div>
+                    <div class="child-item">5</div>
+                </div>
+            </div>
+
+            <!-- ===== NTH-CHILD (ODD) ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :nth-child(odd)</label>
+                <p class="child-indicacion">Elementos impares resaltados</p>
+                <div class="child-contenedor nth-odd-demo">
+                    <div class="child-item">1 - IMPAR</div>
+                    <div class="child-item">2</div>
+                    <div class="child-item">3 - IMPAR</div>
+                    <div class="child-item">4</div>
+                    <div class="child-item">5 - IMPAR</div>
+                </div>
+            </div>
+
+            <!-- ===== NTH-CHILD (EVEN) ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :nth-child(even)</label>
+                <p class="child-indicacion">Elementos pares resaltados</p>
+                <div class="child-contenedor nth-even-demo">
+                    <div class="child-item">1</div>
+                    <div class="child-item">2 - PAR</div>
+                    <div class="child-item">3</div>
+                    <div class="child-item">4 - PAR</div>
+                    <div class="child-item">5</div>
+                </div>
+            </div>
+
+            <!-- ===== NTH-CHILD (3n) ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :nth-child(3n)</label>
+                <p class="child-indicacion">Cada 3 elementos resaltado (múltiplos de 3)</p>
+                <div class="child-contenedor nth3n-demo">
+                    <div class="child-item">1</div>
+                    <div class="child-item">2</div>
+                    <div class="child-item">3 - MÚLTIPLO DE 3</div>
+                    <div class="child-item">4</div>
+                    <div class="child-item">5</div>
+                    <div class="child-item">6 - MÚLTIPLO DE 3</div>
+                </div>
+            </div>
+
+            <!-- ===== NTH-CHILD (3n+1) ===== -->
+            <div class="child-grupo">
+                <label class="child-label"><i class="fas fa-star"></i> :nth-child(3n+1)</label>
+                <p class="child-indicacion">Cada 3 elementos empezando desde el 1</p>
+                <div class="child-contenedor nth3n1-demo">
+                    <div class="child-item">1 - POS 1,4,7...</div>
+                    <div class="child-item">2</div>
+                    <div class="child-item">3</div>
+                    <div class="child-item">4 - POS 1,4,7...</div>
+                    <div class="child-item">5</div>
+                    <div class="child-item">6</div>
+                    <div class="child-item">7 - POS 1,4,7...</div>
+                </div>
+            </div>
+
+        </section>
+
+
+                <!-- ==================== SECCIÓN: NTH-LAST-OF-TYPE ==================== -->
+        <section class="seccion" id="seccion-nth-last-type">
+            <h2><i class="fas fa-sort-amount-up"></i> nth-last-of-type</h2>
+            <p class="subtitulo-seccion">Cuenta desde el último elemento hacia atrás</p>
+
+            <!-- ===== NTH-LAST-OF-TYPE(1) ===== -->
+            <div class="nlt-grupo">
+                <label class="nlt-label"><i class="fas fa-circle"></i> :nth-last-of-type(1)</label>
+                <p class="nlt-indicacion">Solo el último resaltado</p>
+                <div class="nlt-contenedor nlt1-demo">
+                    <p class="nlt-item">Párrafo 1</p>
+                    <span class="nlt-item">Span 1</span>
+                    <p class="nlt-item">Párrafo 2</p>
+                    <span class="nlt-item">Span 2</span>
+                    <p class="nlt-item">Párrafo 3 - ÚLTIMO</p>
+                    <span class="nlt-item">Span 3 - ÚLTIMO</span>
+                </div>
+            </div>
+
+            <!-- ===== NTH-LAST-OF-TYPE(2) ===== -->
+            <div class="nlt-grupo">
+                <label class="nlt-label"><i class="fas fa-circle"></i> :nth-last-of-type(2)</label>
+                <p class="nlt-indicacion">Penúltimo de cada tipo resaltado</p>
+                <div class="nlt-contenedor nlt2-demo">
+                    <p class="nlt-item">Párrafo 1</p>
+                    <span class="nlt-item">Span 1</span>
+                    <p class="nlt-item">Párrafo 2 - PENÚLTIMO</p>
+                    <span class="nlt-item">Span 2 - PENÚLTIMO</span>
+                    <p class="nlt-item">Párrafo 3</p>
+                    <span class="nlt-item">Span 3</span>
+                </div>
+            </div>
+
+            <!-- ===== NTH-LAST-OF-TYPE(ODD) ===== -->
+            <div class="nlt-grupo">
+                <label class="nlt-label"><i class="fas fa-circle"></i> :nth-last-of-type(odd)</label>
+                <p class="nlt-indicacion">Impares contando desde el final</p>
+                <div class="nlt-contenedor nlt-odd-demo">
+                    <p class="nlt-item">Párrafo 1 - IMPAR</p>
+                    <span class="nlt-item">Span 1 - IMPAR</span>
+                    <p class="nlt-item">Párrafo 2</p>
+                    <span class="nlt-item">Span 2</span>
+                    <p class="nlt-item">Párrafo 3 - IMPAR</p>
+                    <span class="nlt-item">Span 3 - IMPAR</span>
+                </div>
+            </div>
+
+            <!-- ===== NTH-LAST-OF-TYPE(EVEN) ===== -->
+            <div class="nlt-grupo">
+                <label class="nlt-label"><i class="fas fa-circle"></i> :nth-last-of-type(even)</label>
+                <p class="nlt-indicacion">Pares contando desde el final</p>
+                <div class="nlt-contenedor nlt-even-demo">
+                    <p class="nlt-item">Párrafo 1</p>
+                    <span class="nlt-item">Span 1</span>
+                    <p class="nlt-item">Párrafo 2 - PAR</p>
+                    <span class="nlt-item">Span 2 - PAR</span>
+                    <p class="nlt-item">Párrafo 3</p>
+                    <span class="nlt-item">Span 3</span>
+                </div>
+            </div>
+
+            <!-- ===== NTH-LAST-OF-TYPE(3n) ===== -->
+            <div class="nlt-grupo">
+                <label class="nlt-label"><i class="fas fa-circle"></i> :nth-last-of-type(3n)</label>
+                <p class="nlt-indicacion">Cada 3 contando desde el final</p>
+                <div class="nlt-contenedor nlt3n-demo">
+                    <p class="nlt-item">Párrafo 1</p>
+                    <p class="nlt-item">Párrafo 2</p>
+                    <p class="nlt-item">Párrafo 3 - MÚLTIPLO DE 3</p>
+                    <p class="nlt-item">Párrafo 4</p>
+                    <p class="nlt-item">Párrafo 5</p>
+                    <p class="nlt-item">Párrafo 6 - MÚLTIPLO DE 3</p>
+                </div>
+            </div>
+
+        </section>
         
 
         <!-- ==================== FOOTER ==================== -->

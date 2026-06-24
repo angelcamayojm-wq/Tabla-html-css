@@ -3041,3 +3041,980 @@ table tbody tr:hover {
     gap: 50px;
   }
 }
+
+
+/* ============================================================
+   SECCIÓN: PSEUDOCLASES CSS - CHAMPIONS EDITION
+   Demostración interactiva de todas las pseudoclases
+============================================================ */
+#seccion-pseudoclases .subtitulo-seccion {
+    text-align: center;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* Grupos de pseudoclases - FONDO MÁS CLARO */
+.pseudo-grupo {
+    margin-bottom: 35px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 16px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pseudo-grupo:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.pseudo-centro {
+    text-align: center;
+}
+
+/* Etiquetas de cada bloque */
+.pseudo-label {
+    display: block;
+    margin-bottom: 18px;
+    color: #f0d060;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.pseudo-label i {
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+/* ===== 1 y 2. HOVER & ACTIVE ===== */
+.pseudo-boton {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+    color: #ffffff;
+    border: 3px solid #d4af37;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+}
+
+.pseudo-boton:hover {
+    background: linear-gradient(135deg, #d4af37, #f0d060);
+    color: #0a1628;
+    border-color: #fff;
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+}
+
+.pseudo-boton:active {
+    transform: scale(0.92) rotate(-2deg);
+    background: linear-gradient(135deg, #0a1628, #1a2744);
+    border-color: #f0d060;
+    color: #d4af37;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.8);
+}
+
+/* ===== 3. FOCUS ===== */
+.pseudo-input {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 3px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.4s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pseudo-input::placeholder {
+    color: #b8c5d6;
+    font-style: italic;
+}
+
+.pseudo-input:focus {
+    border-color: #f0d060;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.2);
+    color: #fff;
+}
+
+/* ===== 4. FOCUS-WITHIN ===== */
+.pseudo-tarjeta-formulario {
+    border: 3px dashed rgba(212, 175, 55, 0.4);
+    padding: 25px;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.pseudo-tarjeta-formulario:focus-within {
+    background-color: rgba(212, 175, 55, 0.15);
+    border: 3px solid #f0d060;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+}
+
+.pseudo-texto-formulario {
+    margin: 0 0 18px 0;
+    font-size: 1rem;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+/* ===== 5. FOCUS-VISIBLE ===== */
+.pseudo-enlace {
+    display: inline-block;
+    color: #e2e8f0;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.pseudo-enlace:focus-visible {
+    background-color: #f0d060;
+    color: #0a1628;
+    font-weight: 700;
+    outline: 4px solid #fff;
+    outline-offset: 3px;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.8);
+    transform: scale(1.05);
+}
+
+/* ===== 6, 7 y 8. LINK, VISITED & ANY-LINK ===== */
+.pseudo-enlaces-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pseudo-link-ubicacion {
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.pseudo-link-ubicacion i {
+    margin-right: 8px;
+}
+
+/* :link - No visitado */
+.pseudo-link-ubicacion:link {
+    color: #ffffff;
+    border: 2px solid #1e3a5f;
+    background: rgba(30, 58, 95, 0.6);
+}
+
+/* :visited - Ya visitado */
+.pseudo-link-ubicacion:visited {
+    color: #f0d060;
+    border: 2px dashed #d4af37;
+    background: rgba(212, 175, 55, 0.3);
+}
+
+/* :any-link - Comodín para ambos estados */
+.pseudo-link-ubicacion:any-link {
+    transition: all 0.3s ease;
+}
+
+.pseudo-link-ubicacion:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== 9. TARGET - Secciones destino ===== */
+.pseudo-botones-target {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pseudo-btn-target {
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pseudo-btn-target1 {
+    background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+    color: #ffffff;
+    border: 2px solid #d4af37;
+}
+
+.pseudo-btn-target1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.6);
+    background: linear-gradient(135deg, #2d5a87, #1e3a5f);
+}
+
+.pseudo-btn-target2 {
+    background: linear-gradient(135deg, #d4af37, #f0d060);
+    color: #0a1628;
+    border: 2px solid #fff;
+}
+
+.pseudo-btn-target2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+/* Secciones destino para :target */
+.pseudo-seccion-destino {
+    width: 100%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 3px solid rgba(212, 175, 55, 0.3);
+    border-radius: 18px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pseudo-seccion-destino:target {
+    background: linear-gradient(135deg, #1e3a5f, #d4af37);
+    color: #ffffff;
+    border-color: #f0d060;
+    transform: scale(1.03);
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
+}
+
+.pseudo-seccion-destino:target h3 {
+    color: #ffffff;
+}
+
+.pseudo-seccion-destino:target .pseudo-apagar {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.pseudo-seccion-destino h3 {
+    color: #f0d060;
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.pseudo-seccion-destino h3 i {
+    margin-right: 8px;
+}
+
+.pseudo-seccion-destino p {
+    color: #e2e8f0;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.pseudo-seccion-destino:target p {
+    color: #ffffff;
+}
+
+.pseudo-apagar {
+    display: inline-block;
+    color: #f0d060;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.pseudo-apagar:hover {
+    background: rgba(212, 175, 55, 0.3);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Explicación debajo de cada bloque */
+.pseudo-explicacion {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+/* ============================================================
+   SECCIÓN: PSEUDOCLASE LANG - MULTIDIOMA CHAMPIONS
+   Demostración de :lang() con 4 idiomas
+============================================================ */
+#seccion-lang .subtitulo-seccion {
+    text-align: center;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
+
+/* ===== SELECTOR DE IDIOMAS ===== */
+.lang-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 50px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.lang-btn:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, #1e3a5f, #d4af37);
+    border-color: #f0d060;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    transform: scale(1.05);
+}
+
+.lang-bandera {
+    font-size: 1.5rem;
+}
+
+.lang-nombre {
+    letter-spacing: 0.5px;
+}
+
+/* ===== CONTENEDOR MULTIDIOMA ===== */
+.lang-contenedor {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.lang-contenedor:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+/* Por defecto, ocultar todos los contenidos */
+.lang-contenido {
+    display: none;
+}
+
+/* Mostrar solo el idioma seleccionado usando :lang() */
+.lang-contenedor:lang(es) .lang-contenido:lang(es),
+.lang-contenedor:lang(en) .lang-contenido:lang(en),
+.lang-contenedor:lang(pt) .lang-contenido:lang(pt),
+.lang-contenedor:lang(fr) .lang-contenido:lang(fr) {
+    display: block;
+    animation: fadeInLang 0.5s ease;
+}
+
+@keyframes fadeInLang {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   SECCIÓN: PSEUDOCLASE DIR - SIMULACIÓN RTL
+   Demostración de :dir() simulando árabe/hebreo
+============================================================ */
+#seccion-dir .subtitulo-seccion {
+    text-align: center;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
+
+/* ===== SELECTOR DE DIRECCIÓN ===== */
+.dir-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.dir-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.dir-btn i {
+    font-size: 1.1rem;
+}
+
+.dir-btn:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.dir-btn.active {
+    background: linear-gradient(135deg, #1e3a5f, #d4af37);
+    border-color: #f0d060;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    transform: scale(1.05);
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.dir-contenedor {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+.dir-contenedor:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+/* ===== TARJETAS ===== */
+.dir-card {
+    background: rgba(30, 58, 95, 0.3);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.dir-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
+}
+
+.dir-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.dir-icono-noticia {
+    font-size: 1.8rem;
+}
+
+.dir-titulo-noticia {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f0d060;
+}
+
+.dir-card-body-texto {
+    color: #e2e8f0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.dir-card-body-texto p {
+    margin-bottom: 12px;
+}
+
+.dir-card-body-texto strong {
+    color: #d4af37;
+}
+
+.dir-card-footer-noticia {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid rgba(212, 175, 55, 0.2);
+    color: #b8c5d6;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ===== TABLA ===== */
+.dir-tabla-wrapper {
+    overflow-x: auto;
+}
+
+.dir-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(10, 22, 40, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    color: #e2e8f0;
+}
+
+.dir-tabla thead th {
+    background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+    color: #d4af37;
+    padding: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.dir-tabla tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dir-tabla tbody tr:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.dir-tabla tbody tr:hover td {
+    color: #f0d060;
+}
+
+
+
+
+
+
+
+/* ===== ESTILOS RTL USANDO :dir() ===== */
+
+/* LTR (por defecto) */
+.dir-contenedor:dir(ltr) .dir-card-header {
+    flex-direction: row;
+}
+
+.dir-contenedor:dir(ltr) .dir-lista-caracteristicas li:hover {
+    transform: translateX(5px);
+}
+
+.dir-contenedor:dir(ltr) .dir-flecha::before {
+    content: '→';
+}
+
+/* RTL (simulando árabe/hebreo) */
+.dir-contenedor:dir(rtl) {
+    direction: rtl;
+    text-align: right;
+}
+
+/* ===== FRASE FINAL ===== */
+.lang-frase {
+    font-size: 1.2rem;
+    color: #f0d060;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 20px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* ============================================================
+   SECCIÓN: FIRST-CHILD, LAST-CHILD, NTH-CHILD
+   Ejemplos visuales simples
+============================================================ */
+#seccion-child .subtitulo-seccion {
+    text-align: center;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+}
+
+.child-grupo {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.child-label {
+    display: block;
+    color: #f0d060;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.child-label i {
+    color: #1e3a5f;
+    margin-right: 8px;
+}
+
+.child-indicacion {
+    color: #8fa4c4;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.child-contenedor {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.child-item {
+    background: rgba(30, 58, 95, 0.4);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    padding: 14px 20px;
+    border-radius: 10px;
+    color: #e2e8f0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.child-item:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FIRST-CHILD ===== */
+.first-child-demo .child-item:first-child {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== LAST-CHILD ===== */
+.last-child-demo .child-item:last-child {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== NTH-CHILD(2) ===== */
+.nth2-demo .child-item:nth-child(2) {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== NTH-CHILD(ODD) ===== */
+.nth-odd-demo .child-item:nth-child(odd) {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== NTH-CHILD(EVEN) ===== */
+.nth-even-demo .child-item:nth-child(even) {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== NTH-CHILD(3n) ===== */
+.nth3n-demo .child-item:nth-child(3n) {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== NTH-CHILD(3n+1) ===== */
+.nth3n1-demo .child-item:nth-child(3n+1) {
+    background: linear-gradient(135deg, #d4af37, #1e3a5f);
+    border-color: #f0d060;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ============================================================
+   SECCIÓN: FIRST-CHILD, LAST-CHILD, NTH-CHILD
+   Ejemplos visuales con colores mejorados
+============================================================ */
+#seccion-child .subtitulo-seccion {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.child-grupo {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.child-label {
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.child-label i {
+    color: #ff6b6b;
+    margin-right: 8px;
+}
+
+.child-indicacion {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.child-contenedor {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.child-item {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 14px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.child-item:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FIRST-CHILD ===== */
+.first-child-demo .child-item:first-child {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== LAST-CHILD ===== */
+.last-child-demo .child-item:last-child {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-CHILD(2) ===== */
+.nth2-demo .child-item:nth-child(2) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-CHILD(ODD) - IMPARES ROJO ===== */
+.nth-odd-demo .child-item:nth-child(odd) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-CHILD(EVEN) - PARES VERDE ===== */
+.nth-even-demo .child-item:nth-child(even) {
+    background: #51cf66;
+    border-color: #40c057;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(81, 207, 102, 0.5);
+}
+
+/* ===== NTH-CHILD(3n) ===== */
+.nth3n-demo .child-item:nth-child(3n) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-CHILD(3n+1) ===== */
+.nth3n1-demo .child-item:nth-child(3n+1) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ============================================================
+   SECCIÓN: NTH-LAST-OF-TYPE
+   Ejemplos contando desde el último elemento
+============================================================ */
+#seccion-nth-last-type .subtitulo-seccion {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.nlt-grupo {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.nlt-label {
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.nlt-label i {
+    color: #ff6b6b;
+    margin-right: 8px;
+}
+
+.nlt-indicacion {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.nlt-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nlt-item {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nlt-item:hover {
+    transform: scale(1.02);
+}
+
+/* ===== NTH-LAST-OF-TYPE(1) - ÚLTIMO ===== */
+.nlt1-demo :nth-last-of-type(1) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-LAST-OF-TYPE(2) - PENÚLTIMO ===== */
+.nlt2-demo :nth-last-of-type(2) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-LAST-OF-TYPE(ODD) - IMPARES DESDE EL FINAL ===== */
+.nlt-odd-demo p:nth-last-of-type(odd),
+.nlt-odd-demo span:nth-last-of-type(odd) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+/* ===== NTH-LAST-OF-TYPE(EVEN) - PARES DESDE EL FINAL ===== */
+.nlt-even-demo p:nth-last-of-type(even),
+.nlt-even-demo span:nth-last-of-type(even) {
+    background: #51cf66;
+    border-color: #40c057;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(81, 207, 102, 0.5);
+}
+
+/* ===== NTH-LAST-OF-TYPE(3n) - CADA 3 DESDE EL FINAL ===== */
+.nlt3n-demo p:nth-last-of-type(3n) {
+    background: #ff6b6b;
+    border-color: #ff4444;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
